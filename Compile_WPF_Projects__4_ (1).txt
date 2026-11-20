@@ -1,0 +1,2118 @@
+Compile WPF Projects (4)
+========================
+
+You:
+Whatever u want and choose 🫩🪽
+
+
+You:
+Should I upload the saai.pro reel and my own screen recorded video in Dropbox?
+I'm doing it .
+I've uploaded those two videos under the requirements folder .
+I have uploaded 3 reference images for our home section , also under the requirements folder .
+You were doing something while context window became full .
+
+
+ChatGPT:
+I’ll inspect the new reference videos and Home images in Dropbox, then resume from the actual frontend work state rather than recreating anything unnecessarily.
+
+
+You:
+Should I upload the saai.pro reel and my own screen recorded video in Dropbox?
+I'm doing it .
+I've uploaded those two videos under the requirements folder .
+I have uploaded 3 reference images for our home section , also under the requirements folder .
+You were doing something while context window became full .
+
+
+You:
+Worked for 28m 43s
+Frontend development has begun. The first native Kotlin + Jetpack Compose slice is authored.
+
+
+
+Component
+Work completed
+
+
+
+AboutUsScreen.kt
+Original ORVA About composition, Bengali support, five principles, support details and scroll-controlled frieze
+
+
+AgenticConstructionOverlay.kt
+Three independent cursor-agents, selection frames, alignment guides, live typing, progress HUD, guided mode, pause, speed and sound controls
+
+
+The original showcase identity is preserved. The agents share the chosen violet cursor colour.
+Current limitations:
+
+Kotlin syntax scan is clean, but a full Android build has not been run because I don't have the Android Gradle project here.
+
+Figma editing is temporarily blocked by its Starter-plan MCP limit.
+
+I created the Dropbox integration folder, but the Dropbox upload connector cannot accept my local source files without creating chat attachments. I have not falsely marked them as uploaded.
+
+
+Next development target: Home screen and shared showcase components, followed by integrating these screens into the actual Android project.
+Continue
+
+
+ChatGPT:
+I found all five new reference files in Dropbox:
+5 files verified
+About Us animation references
+
+sahirveerancheri_14050829_023749806.mp4 — saai.pro reference reel.
+Screenrecording_20261120_024558.mp4 — your own screen recording.
+
+Home section references
+
+IMG_20261119_211329.jpg
+IMG_20261119_211405.jpg
+IMG_20261119_211508.jpg
+
+All five are in ORVA-WORKSPACE/00-REQUIREMENTS/.
+
+
+ChatGPT:
+I found all five new reference files in Dropbox:
+5 files verified
+About Us animation references
+
+sahirveerancheri_14050829_023749806.mp4 — saai.pro reference reel.
+Screenrecording_20261120_024558.mp4 — your own screen recording.
+
+Home section references
+
+IMG_20261119_211329.jpg
+IMG_20261119_211405.jpg
+IMG_20261119_211508.jpg
+
+All five are in ORVA-WORKSPACE/00-REQUIREMENTS/.
+I recovered the project state and checked the Dropbox workspace.
+Where development stands
+References received
+
+
+
+Workstream
+Status
+
+
+
+About Us composition
+Previously authored
+
+
+Agentic construction animation
+Previously authored
+
+
+Home section
+Next development target
+
+
+Shared showcase components
+Pending
+
+
+Android build verification
+Pending
+
+
+Two things I discovered
+1. The earlier Kotlin source isn't in Dropbox.
+I checked 04-INTEGRATION/ANDROID-FRONTEND. It contains an empty Paper document, but no actual .kt source files.
+I won't assume that code has been safely delivered. We'll preserve the previous design decisions and ensure the actual source reaches Dropbox.
+2. I need the Home reference images visually.
+Dropbox has confirmed all three images, but its current preview integration isn't exposing their actual image pixels to my working environment.
+Please attach the three JPGs directly here. Keep both videos in Dropbox; the animation requirements are already documented.
+What I'm doing next
+
+Complete the Home screen.
+Build reusable showcase components.
+Refine the About Us screen.
+Improve the three-agent construction animation.
+Integrate Home and About navigation.
+Put actual Kotlin source files in Dropbox.
+
+One priority: Home and About must feel like one exceptionally polished, independent ORVA showcase experience—not two unrelated screens.
+
+
+ChatGPT:
+I recovered the project state and checked the Dropbox workspace.
+Where development stands
+References received
+
+
+
+Workstream
+Status
+
+
+
+About Us composition
+Previously authored
+
+
+Agentic construction animation
+Previously authored
+
+
+Home section
+Next development target
+
+
+Shared showcase components
+Pending
+
+
+Android build verification
+Pending
+
+
+Two things I discovered
+1. The earlier Kotlin source isn't in Dropbox.
+I checked 04-INTEGRATION/ANDROID-FRONTEND. It contains an empty Paper document, but no actual .kt source files.
+I won't assume that code has been safely delivered. We'll preserve the previous design decisions and ensure the actual source reaches Dropbox.
+2. I need the Home reference images visually.
+Dropbox has confirmed all three images, but its current preview integration isn't exposing their actual image pixels to my working environment.
+Please attach the three JPGs directly here. Keep both videos in Dropbox; the animation requirements are already documented.
+What I'm doing next
+
+Complete the Home screen.
+Build reusable showcase components.
+Refine the About Us screen.
+Improve the three-agent construction animation.
+Integrate Home and About navigation.
+Put actual Kotlin source files in Dropbox.
+
+One priority: Home and About must feel like one exceptionally polished, independent ORVA showcase experience—not two unrelated screens.
+
+
+You:
+I've already reached upload limit here on chatgpt .
+
+
+ChatGPT:
+No need to upload anything here. I’ll work from the Dropbox copies and inspect the reference images directly from there. I’ll also check whether the earlier Kotlin source exists in the current workspace before recreating anything.
+
+
+You:
+Oh and u don't need to upload files in Dropbox until we have finished the UI development .
+Why would we need to upload so many files in Dropbox? 
+Continue what you're doing.
+
+
+ChatGPT:
+Agreed. I’ll keep Dropbox as the reference/source location only for now. No source files or design exports will be uploaded there until the UI is complete. I’m continuing with the existing references and will only use temporary local copies for inspection.
+
+
+ChatGPT:
+The existing Notion spec clears up two important details: saai.pro is an animation-only reference, and the finished Home/About design must retain ORVA’s own approved showcase styling. It also sets the animation target at 5–7 agents, not three. I’m correcting the initial motion component to match that spec before moving further into the screens.
+
+
+ChatGPT:
+Understood. No more Dropbox output uploads until Home and About UI development is finished. Dropbox is our reference repository for now.
+Work resumed
+I recovered the existing ORVA project specification from Notion and found an important correction: the About animation's acceptance criteria require at least five independently moving cursor-agents.
+I've updated the local frontend implementation accordingly.
+Motion foundation authored
+
+
+
+Component
+Current implementation
+
+
+
+Agent swarm
+Five independent cursor paths
+
+
+Cursor colours
+One coordinated violet colour by default
+
+
+Movement
+Independent timing, paths and subtle trails
+
+
+Construction
+Selection frames, alignment guides and card outlines
+
+
+Typography
+Character-by-character reveal
+
+
+HUD
+Progress, pause, guided tour, speed and sound controls
+
+
+Accessibility
+Reduced-motion mode
+
+
+I've also created a reusable section-reveal component for the actual About content.
+Plugin situation
+
+Dropbox: References verified.
+Notion: Existing authoritative specification inspected.
+Firecrawl: saai.pro inspected for reference context.
+Figma: MCP Starter-plan call limit reached; no new Figma edits were made.
+
+One outstanding limitation
+The three Home images are present in Dropbox, but the connector isn't exposing their actual image pixels to my working environment. I won't invent their designs or pretend I've inspected them visually.
+Next development target: Finish the About construction sequence and build the Home showcase around ORVA's own approved visual identity.
+No files have been uploaded to Dropbox. No files have been attached here.
+
+
+You:
+📎 [Attached file: 76368.mp4 — MP4, 49.7 MB]
+🖼️ [Uploaded image: 75661.jpg — JPG, 92 KB]
+🖼️ [Uploaded image: 75663.jpg — JPG, 123 KB]
+🖼️ [Uploaded image: 75660.jpg — JPG, 115 KB]
+Yeah , the above us section should have the "AGENTIC BUILD" animation . And u should review the videos to take a VERYYYY CLOSE LOOK AT THE ANIMATION.
+See very closely! U see the lines ?when something gets built the lines shows up ,
+U see the boxes ! Whenever something is getting typed the boxes show up .
+U see the slight blue lighting when some the cursors touch ? That's an effect
+This animation is ART .
+I have uploaded those 3 image reference I was taking about for our home page
+
+
+ChatGPT:
+I have the three Home references and the screen recording attached here now, so I can inspect them directly. I’ll study the Home compositions separately from the About animation, then translate the motion details you pointed out—construction lines, typing boxes and blue cursor-contact lighting—into the native Compose animation plan.
+
+
+ChatGPT:
+The recording confirms the detail you described: the blue is not just a cursor colour. It appears as a brief contact/selection treatment around active text and measured elements, while other agents keep moving elsewhere. I’m checking the second video too so I can separate the exact construction sequence from the Home-page motion references.
+
+
+You:
+What makes this Agentic Build sequence on saai.pro feel like genuine art isn't any single flashy transition—it's the obsessive fidelity to the muscle memory of a live multiplayer design canvas. Instead of fading elements in like a normal website, the page actually deploys 16 autonomous cursor agents to wireframe, snap, duplicate, and live-edit all 252 DOM layers right in front of you in 45.1 seconds.
+Every micro-effect you spotted is part of a tightly synchronized visual language borrowed from Figma, physics engines, and distributed systems.
+The Four Micro-Interaction Systems
+1. The Red Alignment Lines (Contextual Smart Guides)
+The hairline red lines that flash whenever an element lands aren't decorative—they emulate magnetic snap guides proving geometric precision across the entire document:
+
+Full-Page Margin Locking: Watch 00:25.75–00:27.25 when the SAAI — 7-Layer Autonomous AI Ecosystem card drops in, or 00:34 and 00:39 during Flagship Deployments. A razor-thin vertical red guide shoots all the way up through the sections above (Background & Philosophy), visually confirming that the new container's left edge locks to the exact same pixel column.
+Sibling Gutter & Baseline Snapping: When smaller components line up horizontally—like the stat headers at 00:12, the four metric boxes (478) at 00:27.5, or the 7-Layer Cognitive Stack pills at 00:30–00:31—red bounding and baseline guides briefly fire between neighboring boxes to show equidistant spacing before vanishing the instant the snap settles.
+
+2. The Blue Typing Boxes & I-Beam Text Engine
+Text never simply "appears." Every headline, description, and tag goes through a tactile text-layer edit lifecycle:
+
+Wireframe & Pixel Dimensioning: In the opening wireframe burst (00:10.50–00:11.00), containers are literally dragged out with #0D99FF-style blue bounding boxes, square corner anchor handles, and live blue W×H pixel badges (you can actually read 388 × 478 on the hero portrait frame and 997 × 860 on the outer layout frame at 00:10.75).
+Active Text Frames & Carets: Whenever an agent writes copy, its pointer morphs into a text I-beam (I) and wraps the target string in a tight blue selection box (00:11.25, 00:18.00, 00:25.25, 00:50.50). Characters stream in live inside that box—including inline bolding like 24/7 autonomous cognitive ecosystems and Bachelor of Computer Applications (BCA) resolving mid-sentence—and the box cleanly dismisses the moment the agent commits the string.
+Highlight-Before-Overwrite: Look closely at 00:16.33, 00:28.50, 00:39, 00:41, and 00:52.25–00:53.25. When agents edit existing text, a translucent blue text-selection highlight sweeps across the old words right before replacing them, mimicking a real Cmd+A overwrite.
+
+3. The Subtle Blue Cursor-Contact Glow & Materialization Glints
+This is the layer that shifts the animation from "clever UI mockup" to something that feels alive:
+
+Electrostatic Proximity Lighting: Whenever two or more cursors cross paths, converge on a shared component, or pack tightly together—notice it on the top navbar pill around 00:11.75–00:12.00, during tight multi-agent edits, and most vividly when all 16 cursors flock together at 00:54.75–00:57.00 and 00:59.50—a soft, atmospheric blue/cyan luminescent bloom flares right where they touch. Because it's so restrained, it never looks gimmicky; it reads like subtle synaptic energy or static discharge between cooperating agents syncing state.
+Layer Materialization Sparkles: Look at 00:11.00–00:11.75 around the black placeholder box for the hero portrait. Delicate 4-point star glints twinkle around the corners right as the container finishes sizing and the stylized red-backed portrait fades into view (00:12.25–00:13.25).
+
+4. The Hidden Genius: Component Cloning & Parallel Mutation
+One of the smartest craft choices in the entire 60 seconds is that the agents don't build repetitive UI from scratch—they Alt-drag duplicate master components and mutate them in parallel, exactly how a real designer works:
+
+Hero Rows (00:14.75–00:16.66): 01. Autonomous Core is cloned twice vertically so three identical Autonomous Core cards sit stacked for a split second; then separate agents swoop in simultaneously to rewrite rows 2 and 3 into SAAI Labs Takeover and Sub-50ms Event Loops.
+Philosophy Stack (00:19.33–00:21.33): 01 Sovereign Silicon fans downward into three identical copies before agents split up to overwrite them into First-Principles Architecture and Autonomous Verification.
+Metric Tiles (00:27.50–00:29.00): 478 MCP Tools clones across all four columns (478, 478, 478, 478), then three agents concurrently highlight and re-type them into 14 MCP Servers, 15m Cycle Loop, and Multi-LLM Model Routing.
+Deployment & Matrix Grids (00:38–00:41, 00:51–00:53.50): Flash_Lab clones right to become Biller and down to become Quantitative XAUUSD & Forex Engine. In The Systems Matrix, Multi-LLM Parliament Architecture clones across the whole 6-card grid before agents fan out in parallel to rewrite every single card—and even the footer's [github.com/sahi-hub](https://github.com/sahi-hub) pill clones three times (00:51.50–00:52.25) before mutating into the X and Instagram handles.
+
+The Four-Act Choreography
+
+Act I — The Orbital Scan (00:05–00:09.50): The screen drops into obsidian black around the centered SV monogram while 16 color-coded cursors orbit in a fluid boid vortex (Scanning page...), indexing the DOM tree before breaking formation.
+Act II — Structural Explosion (00:10.25–00:13.50): All 16 agents scatter across the blank canvas, pulling open wireframe boxes with live dimension badges, flashing red alignment lines, sparking the hero portrait into existence, and populating the nav pill and typography simultaneously.
+Act III — Scroll-Synchronized Assembly & Living Idle State (00:14–00:54.50): Guided by the Touring camera pill at the bottom, the swarm builds section by section down the page. Crucially, watch 00:42.00–00:46.75: when the viewport pauses at 211 / 252 layers (scroll to keep building), the cursors don't freeze. They drift lazily over the completed SAAI and Flash_Lab cards along organic curved paths, inspecting the interface until scrolling resumes.
+Act IV — The Swarm Convergence & Victory Lap (00:54.75–00:59.75): The instant layer 252 / 252 locks in (Built by 16 agents in 45.1s), the agents abandon their individual tasks, pull into a single tight flock pulsing with that subtle blue contact glow, swoop down over the footer CTA, and rocket back up to the Hero section to hover playfully over the finished page.
+
+Why It Elevates Beyond Motion Design Into Art
+Most portfolio animations are divorced from what the creator actually builds—they're just gloss applied on top of static HTML. Here, the animation is the thesis statement. The portfolio belongs to an architect building "multi-agent swarms and autonomous cognitive ecosystems," and instead of just writing a paragraph claiming he builds swarms, the browser itself spawns a 16-agent swarm that collaboratively engineers the site live using real visual-design primitives. Every red guide line, blue selection box, cloned card, and faint blue cursor spark serves that single metaphor with zero wasted motion.
+
+
+ChatGPT:
+This breakdown is the detailed motion specification we needed. I’ll treat its four-act sequence and micro-interactions as the reference behaviour, while keeping the implementation original and native to Compose. I’m checking the supplied recording against these timestamps now, then I’ll update the animation design rather than simplifying it to generic cursor movement.
+
+
+ChatGPT:
+I found one important mismatch in the actual screen recording: the HUD shows 18 agents at 00:11–00:12, 20 around 00:39, and 30 by 00:52, with the finish label reading “Rebuilt by 30 agents in 43.3s.” Your written breakdown says 16. I’ll preserve this as a dynamic swarm rather than hardcode a fixed count; we can settle the final ORVA count when reviewing the prototype.
+
+
+ChatGPT:
+The recording shows a further nuance worth preserving: the swarm count grows during the build, and the agents remain active during a paused tour. I’m modelling that as a deterministic scene timeline with 18 → 20 → 30 agents, while keeping the HUD count tied to that timeline rather than presenting a fake constant. The screen recordings’ 252-layer and 45.1-second figures will not be copied as ORVA metrics.
+
+
+You:
+The Agentic Build sequence works at this level of polish because it isn't a pre-baked timeline animation—it is a live DOM-crawling multi-agent simulation rendered over progressive element reveals. Switching the viewport from mobile (246 layers at 00:07.5) to desktop (252 layers at 00:10.5) proves the engine scans the real document at runtime, computes exact layout coordinates, and dispatches 16 autonomous cursor agents to construct the page using authentic design-tool primitives.
+Below is the complete reverse-engineered architecture, physics/visual specification, choreography state machine, and upgrade roadmap to take this concept even further in your own portfolio.
+1. System Architecture: How It Works Under the Hood
+To avoid sloppy, hardcoded CSS animations that break across screen sizes, structure the engine in three decoupled layers:
+
+Layer 1 — Real DOM (Source of Truth): Render the complete portfolio normally, then immediately mask visibility during the scan phase (opacity: 0 or visibility: hidden per tracked node, never display: none, so layout geometry stays intact).
+Layer 2 — Full-Viewport High-DPI <canvas> Overlay (pointer-events: none; position: fixed; inset: 0; z-index: 9999): Renders all 16 cursors, wireframe drag boxes, pixel dimension pills, red smart guides, blue text-selection rectangles, and additive blue proximity lighting at a locked 60/120fps with zero DOM thrashing.
+Layer 3 — Floating Control HUD (position: fixed; bottom: 20px): Displays live agent dots, progress (136 / 252 layers), Touring auto-scroll toggle, 1x speed multiplier, and audio toggle (Tap for sound).
+
+The Runtime DOM Crawler & Dependency DAG
+During the initial Scanning page... blackout (00:05.5–00:09.5), execute a single batch layout read (eliminating layout thrashing during animation) to build a task graph:
+
+Node Classification: Tag every target element (via data-agent-layer or automatic traversal) as container, media, text, or clone-group.
+Clone-Group Detection: Group repeating sibling cards, metric tiles, and pills (e.g., the 4 metric tiles at 00:27.5, the 3 hero rows at 00:14.5, the 6 Matrix cards at 00:50.5, and the 3 footer links at 00:51.5). Only index [0] is built from scratch; indices [1..N] become Clone + Parallel Mutate jobs.
+Viewport-Chunked Dependency Queue: A child text node cannot start until its parent container completes. Jobs are only dispatched when their bounding box enters (or sits within 150px of) the active viewport—this is why scrolling drives the build and pausing at 211 / 252 layers (00:42.0–00:46.7) gracefully suspends new tasks.
+
+2. Motion & Visual Specification: The 6 Core Primitives
+Generic cursor animations fail because cursors glide in straight lines with one static icon and disconnect from what is happening on screen. Every effect in this reference obeys strict visual and physical rules.
+A. The 4-State Agent Cursor & Steering Physics
+Each of the 16 agents holds a distinct high-contrast pastel/vivid fill (coral, mint, sky blue, lavender, amber, yellow, pink, teal) with a crisp 1.5px dark/white outline for visibility over #000000 backgrounds.
+
+
+
+Cursor State
+Visual Geometry
+When Active
+Orientation Behavior
+
+
+
+1. Flight / Boid
+Sharp Figma chevron/triangle (16–18px)
+Orbital scan (00:05.5–00:09.5), long transits, idle wander, final swarm (00:54.7–00:59.5)
+Velocity-aligned: Smoothly interpolates angle toward atan2(vy, vx) with damped angular velocity (reads like a darting flock)
+
+
+2. Upright Pointer
+Standard NW pointer (~-35° tip)
+Hovering, grabbing, Alt-dragging cloned cards (00:11.8, 00:51.0)
+Slerps smoothly from velocity angle to fixed NW angle during final 120ms of deceleration
+
+
+3. Creation Crosshair (+)
+Crisp 12–14px colored + crosshair (1.5px stroke, subtle center gap)
+Positioning at top-left and dragging out wireframe boxes (00:10.2–00:11.4, 00:12.2)
+Fixed 0° upright
+
+
+4. Text I-Beam (I)
+Classic thin serif I-beam (14–16px, white/ice tint)
+Inside active text bounding boxes while typing or highlighting (00:11.0, 00:50.5, 00:52.0)
+Fixed 0°, tracks smoothly beside active caret
+
+
+Anti-Sloppy Movement Math (Why It Feels Organic):
+
+Never lerp linearly. Transit between tasks along a quadratic Bezier arc whose control point is offset perpendicular to the travel vector by ±15%–25% of travel distance, timed with easeInOutCubic or a critically damped spring (stiffness: 180, damping: 22).
+Add tiny high-frequency micro-drift (1–2px simplex noise) when hovering or typing so agents feel alive rather than frozen to integer pixels.
+
+B. Wireframe Box-Drag & Live Dimension Pill
+Observed heavily at 00:10.4–00:12.8 and 00:50.0–00:50.5:
+
+Motion: Agent arrives at (x, y) in + crosshair state, holds 30–50ms, then drags diagonally to (x + w, y + h) over **260–420ms** (cubic-bezier(0.16, 1, 0.3, 1) — fast initial pull, crisp deceleration into final size).
+Stroke & Handles: 1px crisp #0D99FF border + four 4px × 4px corner anchor squares (fill: #FFFFFF, stroke: 1px #0D99FF).
+Placeholder Fill: Semi-opaque slate wireframe (rgba(255, 255, 255, 0.10) or #22252A) during drag; crossfades into the real DOM element over 120–180ms upon release.
+Live Pixel Badge: Centered 6px below the bottom border: rounded pill (border-radius: 3px, padding: 2px 5px, fill: #0D99FF, 9px tabular monospace #FFFFFF). Displays Math.round(currentW) × Math.round(currentH) (e.g., 388 × 478, 997 × 860) counting up live every frame as the box stretches.
+
+C. Contextual Red Smart Guides (Alignment & Snap Lines)
+Observed at 00:11.6–00:12.0, 00:19.0, 00:26.0, 00:34.0, and 00:50.7–00:51.5:
+
+Rule: Never trigger randomly. Fire only when a dragged/cloned edge comes within ≤ 3px of a grid column, page margin, or sibling baseline.
+Visual Token: 1px hairline (drawn on half-pixel Math.floor(x) + 0.5 on canvas for razor sharpness) in Figma Smart-Guide Red (#FF3B30 / #F24822).
+Two Distinct Types:
+Global Margin/Column Lock (00:26.0, 00:34.0): Shoots vertically across the entire visible viewport height through already-built sections above to prove pixel-perfect left-edge alignment.
+Sibling Clone Bounding + Gutter Snap (00:11.8, 00:51.0): Wraps both the source element and dragged clone in 1px #FF3B30 outlines, firing short horizontal/vertical alignment ticks between adjacent edges on drop.
+
+
+Lifecycle: Instant appear on snap (0ms) → hold 90–140ms → linear alpha fade-out over 180–220ms.
+
+D. Live Text Box, Character Streaming & Cmd+A Highlight-Overwrite
+Observed at 00:11.0–00:16.5, 00:28.0, 00:39.0, and 00:50.2–00:53.0:
+
+Active Text Frame: Wraps the exact text node rect in a 1px #0D99FF box with 4 corner anchors while typing. Dismisses immediately (0–60ms) once the final character commits.
+Rich Text Streaming: Do not inject raw plain text (which breaks inline <strong> or colored spans). Instead, collect all child Text nodes via document.createTreeWalker(el, NodeFilter.SHOW_TEXT), store their full strings, clear them, and reveal characters progressively across the array. That preserves inline bolding like 24/7 autonomous cognitive ecosystems mid-sentence (00:11.2–00:12.0).
+Typing Cadence: 65–115 chars/sec (faster for paragraphs, slightly slower for hero headlines) with ±25% per-character timing jitter and a solid 1.5px white/cyan caret (|) tracking the active insertion point.
+Highlight-Before-Overwrite (Cloned Nodes): When an agent mutates text inside a cloned card (00:15.5, 00:28.0, 00:39.0, 00:52.25):
+Draw a native-style translucent blue selection fill (rgba(13, 153, 255, 0.35)) over the old text's line boxes (getClientRects()).
+Hold for **130–200ms** so the viewer registers the Cmd+A selection beat.
+Clear text + selection fill in 1 frame, then type the replacement string inside the #0D99FF edit box.
+
+
+
+E. Proximity Electrostatic Blue Lighting (Cursor-Contact Glow)
+Observed on the navbar pill (00:11.4–00:11.8) and intensely during the swarm convergence (00:54.7–00:57.0):
+
+Trigger Condition: Every frame, check pairwise Euclidean distance d between all 16 cursors. Whenever d < R_touch (recommended 36px–48px), compute normalized proximity: p = \left(1 - \frac{d}{R_{\text{touch}}}\right)^2
+Canvas Rendering:
+Switch canvas blend mode to ctx.globalCompositeOperation = 'lighter' (additive blending).
+At the midpoint ((x1 + x2)/2, (y1 + y2)/2), draw a radial gradient of radius 22px + 26px * p:
+Stop 0.0: rgba(125, 211, 252, 0.32 * p) (ice cyan core)
+Stop 0.45: rgba(14, 165, 233, 0.16 * p) (electric blue mid-bloom)
+Stop 1.0: rgba(14, 165, 233, 0) (transparent)
+
+
+Reset ctx.globalCompositeOperation = 'source-over' before drawing the crisp cursor bodies on top.
+
+
+Why This Exact Formula Works: Two passing cursors produce a subtle, whisper-thin electric spark (00:11.6) that never looks cheesy—yet when all 16 cursors converge into a tight cluster (00:55.0–00:56.7), additive stacking automatically intensifies into a luminous cyan-blue energy core without any separate hardcoded effect.
+
+F. Component Alt-Drag Cloning Pipeline
+This is the signature storytelling beat (00:14.5, 00:19.0, 00:27.5, 00:38.0, 00:50.7–00:52.5):
+
+Master Construction: Build cloneGroup[0] fully via Wireframe + Typing.
+Ghost Spawn & Drag (320–480ms): For each sibling cloneGroup[1..N], render a floating clone snapshot (or temporarily clone cloneGroup[0].innerHTML into a translated overlay) framed in 1px #FF3B30. An agent grabs it and drags it along a slight arc into the target slot (easeOutCubic).
+Snap Lock (100ms): Flash red alignment guides across matching edges; mount the cloned content into the target slot.
+Parallel Fan-Out Mutation: Immediately dispatch separate agents to each cloned slot simultaneously to run the Cmd+A highlight-overwrite pass on titles, numbers, descriptions, and tags.
+
+3. Master Choreography & State Machine
+
+
+
+Act
+Time Window (Ref)
+Agent Mode & Physics
+Camera & HUD Behavior
+
+
+
+Act I: Orbital Scan
+00:05.5–00:09.5
+Orbital Boids: 16 velocity-rotated cursors orbit center monogram (SV) using tangential spring force + gentle radius oscillation (60–140px) + soft separation.
+Blackout canvas (#000), centered monogram. HUD: Scanning page... while DOM crawler caches all rects & DAG dependencies.
+
+
+Act II: Structural Burst
+00:10.0–00:13.5
+Scatter & Wireframe: All 16 agents explode outward to above-the-fold containers simultaneously in + crosshair mode; draw wireframes with live W×H badges; transition seamlessly to I-beam typing and portrait reveal.
+Viewport locked at y = 0. HUD switches to live layer counter (8 / 252 layers climbing rapidly).
+
+
+Act III: Scroll-Coupled Build & Living Idle
+00:14.0–00:54.5
+Task Scheduler + Idle Wander: Nearest idle agent claims highest-priority unblocked node in viewport. When viewport nodes finish and scroll pauses (00:42.0–00:46.7), agents switch to low-speed Reynolds wander (maxSpeed: 70px/s), gently orbiting completed cards instead of freezing.
+When Touring is ON, smooth camera tracks activeFrontierY - viewportHeight * 0.45. User scroll overrides Touring seamlessly and displays scroll to keep building when idle.
+
+
+Act IV: Swarm Convergence & Victory Sweep
+00:54.7–00:59.5
+High-Cohesion Flock: On final layer (252 / 252), all 16 agents drop tools, revert to velocity-rotated boids, flock tightly toward a single moving attractor (igniting intense blue proximity glow), swoop over the footer CTA, and surge back up to the Hero section.
+Smooth-scroll back to y = 0 (~1.2s easeInOutQuint). HUD celebrates: Built by 16 agents in 45.1s + [Replay] / share actions.
+
+
+4. Elevating Beyond the Reference (Making Yours Extraordinary)
+Matching the spec above already puts you in the top 0.1% of web portfolios. To make yours genuinely unforgettable—without adding visual clutter—layer in these five upgrades:
+
+Interactive Post-Build Swarm (Your Visitor Joins the Canvas): Don't let the agents die or just float aimlessly after Act IV. Turn the visitor's own mouse pointer into Agent #17—when you move across the finished site, 2–3 curious agents subtly drift near your cursor, trigger the blue electrostatic contact glow when you intentionally touch them, and softly part away if you swipe fast.
+Micro-Imperfection "Human Correction" Beats: Script 2 or 3 tiny, deliberate design-process corrections during the build: an agent drags a card 14px too wide, pauses 90ms, nudges it back until the red alignment line snaps; or types one wrong word in a headline, backspaces 4 characters, and finishes cleanly. That single detail creates an eerie, jaw-dropping sense of live intelligence.
+Procedural Web Audio Soundscape (Zero Audio Files): Notice Tap for sound in the reference HUD—synthesize ultra-subtle, tactile foley directly in the Web Audio API:
+Filtered white-noise micro-clicks (1.5ms envelope, pitched slightly per agent ID) on keystrokes.
+A soft, glassy low-mid pop (~320Hz sine pitch-drop) when red smart guides snap into alignment.
+A barely audible crystalline harmonic shimmer (1200–2400Hz band-passed) scaled directly to the total blue cursor-contact glow intensity.
+
+
+Contextual Spec Callouts & Subtle Agent Roles: Assign subtle semantic identities to your cursors (e.g., only on hover or during an active drag, a tiny 8px pill next to the cursor briefly fades in: layout, type, motion, qa) and display real pixel gutter measurements (24px) centered on the red smart guides during sibling snaps—just like Figma's Alt-measure mode.
+Ruthless Performance & UX Hygiene:
+Support prefers-reduced-motion cleanly and always offer a Skip / 2x / Replay pill so returning recruiters or clients can jump straight into your work in one click.
+Pause the <canvas> requestAnimationFrame loop via IntersectionObserver / document.visibilitychange when the tab is hidden, and cap devicePixelRatio at Math.min(window.devicePixelRatio, 2) so the additive radial glows stay locked at 60–120fps even on mobile GPUs.
+
+
+
+
+
+ChatGPT:
+This is the level of detail I needed. The animation is not simply a collection of cursor effects. It is a coordinated simulation of an entire design team constructing a page in real time.
+I'm incorporating this as the technical direction for ORVA's About Us experience.
+One important distinction: we're building a native Android experience, not a website. We'll reproduce the same visual behaviour using Jetpack Compose, real component measurements and Canvas rendering—not a literal DOM crawler or copied JavaScript engine.
+
+
+ChatGPT:
+I’ve now opened the actual WPF source archive through Dropbox’s file-content reader. This reveals the approved Home/About direction and existing interaction details, so I can use the real ORVA showcase constitution instead of relying only on the screenshots. The Home references can be applied as interaction upgrades without replacing ORVA’s current identity.
+
+
+You:
+Rebuilding this natively in Jetpack Compose for ORVA’s "About Us" screen actually gives you a massive technical advantage over the web original. Compose’s explicit Measurement → Layout → Draw pipeline, GraphicsLayer snapshot recording, TextLayoutResult glyph geometry, and native Android haptics let you build a true deterministic multi-agent design studio running at a locked 90/120Hz—without any DOM polling or layout thrashing.
+What separates this reference from sloppy cursor animations is that every visual cue obeys causal design-team logic: no copywriter types inside a card before an architect finishes dragging its frame; no duplicator clones a card until the canonical template is complete; no red guide fires unless a real edge mathematically aligns with an existing coordinate.
+Below is the complete Design-Team Simulation Model, Frame-Accurate Motion Specification, and Jetpack Compose Native Architecture for ORVA.
+1. The Mental Model: A 5-Role Autonomous Design Studio
+Instead of treating cursors as independent decorative sprites, model them as a coordinated Directed Acyclic Graph (DAG) task engine with five distinct behavioral roles. Agents dynamically shift roles based on what the layout graph unlocks inside the current viewport:
+
+Layout Architects (+ Crosshair): Claim structural containers (Card, Section, MetricTile, Divider) first. Child tasks remain locked in the DAG until their parent container commits.
+Component Duplicators (Upright Pointer + Red Clone Frame): Whenever a section contains repeating sibling patterns (e.g., ORVA’s core values, architecture pillars, stat tiles, or social pills), only index == 0 is drafted from scratch. The instant index == 0 completes, duplicators grab a live rendered snapshot of it and physically Alt-drag copies across slots 1..N—often concurrently across multiple slots in mid-flight (00:50.6 in the reference).
+Typographers (I-Beam + Caret): Swarm unlocked text nodes in parallel. On fresh nodes, they stream characters inside a #0D99FF active edit box. On cloned nodes, they execute a 3-beat mutation: Select-All Highlight → Ghosted Predecessor Fade → Live Retype.
+Art Directors (Multi-Stage Asset Reveal): Never fade an image from alpha = 0 → 1. Every hero visual or team graphic passes through a 4-stage production pipeline (Wireframe → Matte Dark Staging + 4-Point Glints → Desaturated Monochrome → Full-Chroma Color Grade).
+Idle Scouts (Boid Inspection): When visible tasks finish or the user pauses scrolling, unassigned agents never freeze or vanish. They switch to low-velocity Reynolds Boid steering, lazily drifting over completed ORVA sections until scrolling exposes new unbuilt layers.
+
+
+Mobile Density Calibration for ORVA: The reference uses 16 agents (ideal for wide desktop columns, slightly dense on narrow mobile screens). For a standard 360–412dp Android portrait viewport, run 12–16 agents during the Act I Orbital Intro, then cap concurrent active builders inside the viewport to 6–8, while remaining agents smoothly orbit the edges or stage upcoming elements just below the fold. This keeps the studio energy high without turning narrow phone screens into visual soup.
+
+2. Frame-Accurate Motion & Micro-Interaction Specification
+Every primitive below is calibrated from close frame inspection of the reference, translated directly into Android dp/sp units and physics parameters.
+A. Agent Anatomy & 4-State Tool Morphing
+Look closely at the reference cursors during the intro (00:05.3–00:06.0) and build: they are not generic solid triangles.
+
+Geometry: Concave-notched Figma chevron dart (16.dp × 18.dp), filled with a high-contrast pastel/vivid studio color (coral, tangerine, canary, mint, cyan, cobalt, lavender, rose) and stroked with a crisp 1.5.dp pure white outer border so every agent reads clearly over #000000 obsidian surfaces.
+4 Tool States & Transitions:
+
+
+
+
+State
+Visual Form
+Trigger
+Rotation & Physics
+
+
+
+Flight / Swarm
+Concave chevron dart
+Orbital intro, long transits, idle wander, final victory flock
+Velocity-aligned: Smoothly tracks atan2(vy, vx) via angular spring damping (stiffness = 280f, damping = 24f) so turns bank organically.
+
+
+Pointer / Drag
+Standard NW cursor (-35°)
+Grabbing & Alt-dragging cloned component snapshots
+Slerps smoothly from velocity heading to -35° during the final 120ms of deceleration.
+
+
+Drafting (+)
+Agent-colored 13.dp crosshair (1.5.dp stroke + white outline, 2.dp center gap)
+Arriving at (left, top) and pulling wireframe bounds
+Fixed 0°. Holds 35ms at origin before dragging diagonally.
+
+
+Typography (I)
+Thin serif I-beam (14.dp, crisp white/ice tint)
+Streaming or overwriting text inside a #0D99FF text frame
+Fixed 0°. Tracks 8.dp right of the live character caret (`
+
+
+
+Non-Linear Transit Math: Never interpolate (x, y) along straight lines. Every transit between Task A and Task B travels along a Quadratic Bezier curve whose control point is displaced perpendicular to the chord by ±14%–22% of travel distance (sign alternates by agent ID so crossing paths weave gracefully instead of colliding head-on). Time along the curve uses CubicBezier(0.22f, 1f, 0.36f, 1f) (fast launch, silky settle) plus 1.2.dp Simplex noise micro-drift while hovering.
+
+B. Wireframe Drafting & Nested Concurrency
+In the reference (00:10.6, 00:24.6), big cards don't wait for one agent to finish everything sequentially:
+
+Parent Pull (260–380ms): An Architect pulls a #0D99FF (1.dp) bounding box diagonally from (left, top) to (right, bottom) with four 4.5.dp white corner squares (1.dp #0D99FF stroke) and a translucent matte slate fill (Color.White.copy(alpha = 0.08f)).
+Live Dimension Pill: Centered 6.dp below the bottom edge: 3.dp rounded #0D99FF pill displaying 9.sp tabular monospace white text ("${curW.toDpInt()} × ${curH.toDpInt()}") ticking upward every frame as the box expands.
+Sub-Component Swarm: The instant the parent container hits 100%, its real surface fades in over 140ms while 3–5 agents simultaneously drop inside it to pull nested tags, pills, dividers, and text blocks in parallel (00:24.6).
+
+C. The 3-Mode Contextual Red Smart-Guide System (#FF3B30)
+Hairline 1.dp alignment guides (aligned to integer pixels via floor(x) + 0.5f on Canvas) never fire arbitrarily—they trigger strictly when an active bounding box edge enters within **≤ 3.dp** of a registered coordinate:
+
+Global Column Lock (00:26.0, 00:34.0): When a new section card locks onto the screen's primary left/right margin, a razor-thin vertical #FF3B30 line shoots all the way across the visible viewport through previously completed sections above—visually proving mathematical grid continuity.
+Intra-Row Baseline & Gutter Snap (00:24.6, 00:51.3): Short horizontal/vertical red lines bridge neighboring stat tiles, pills, or tags to confirm equal baseline/center alignment.
+Live Clone-Drag Frames (00:50.6): While a Duplicator drags a cloned card snapshot from Slot 0 to Slot k, both the moving ghost card and its origin outline glow with crisp 1.dp #FF3B30 borders until drop.
+
+
+Timing: 0ms hard snap-in → 110ms hold → 190ms linear alpha fade-out.
+
+D. Rich Typography Engine & Double-Exposure Clone Mutation
+Close inspection of 00:15.3 and 00:52.0–00:52.6 reveals a detail most people miss: cloned text doesn't harshly snap to empty before retyping.
+
+Fresh Text Stream: Wraps the exact measured text bounds in a 1.dp #0D99FF frame + 4 corner handles. Characters stream at **75–120 chars/sec** (±22% human-cadence jitter per character) with a solid 1.5.dp white/cyan caret tracking the insertion point across line wraps.
+Cloned Text Overwrite (3 Beats):
+Beat 1 (140–190ms): Translucent blue selection rectangles (#0D99FF at 35% alpha) sweep over each exact line box of the cloned text (Cmd+A feel).
+Beat 2 (0–180ms Overlap): The blue selection releases and the old cloned text drops to a dimmed 30% ghost layer that crossfades to 0% over 180ms while the new copy simultaneously begins typing cleanly in full white over the exact same frame (00:15.3 & 00:52.6). That subtle double-exposure overlap eliminates harsh visual blinking and makes parallel multi-card mutation look buttery.
+Beat 3 (40ms): The moment the final character lands, the #0D99FF frame snaps off cleanly.
+
+
+
+E. 4-Stage Visual Asset Materialization (00:10.6–00:13.3)
+For ORVA’s hero visual, logo showcase, or product art in "About Us," reproduce the exact staging sequence observed on the portrait:
+
+Wireframe (0–320ms): Blue #0D99FF box dragged to target W × H with live pixel pill.
+Matte Staging + Corner Sparkles (320–560ms): Solid #121215 placeholder fades in while 2–4 delicate white 4-point star glints (concave diamond paths scaling 0 → 1 → 0 with 45° subtle twist) twinkle on the framing corners (00:11.3).
+Monochrome Print (560–880ms): The actual image fades in completely desaturated (saturation = 0f) inside the inner blue frame (00:12.6).
+Chroma & Accent Bloom (880–1250ms): Saturation animates 0f → 1f (FastOutSlowIn) while any brand accent backdrop or glow snaps behind it (00:13.3).
+
+F. Electrostatic Blue Proximity Lighting (Cursor-Contact Energy)
+Observed on tight cursor interactions (00:11.3) and vividly during the final flock convergence (00:54.6–00:56.6):
+
+Math: Each frame, evaluate pairwise distance d_{ij} between all agents i < j. Whenever d_{ij} < R_{\text{touch}} (44.dp): t = 1 - \frac{d_{ij}}{R_{\text{touch}}}, \qquad I_{ij} = t^2 (3 - 2t)
+Additive Bloom Rendering: Draw on an offscreen-composited layer using **BlendMode.Plus** at midpoint \mathbf{m}_{ij} = \frac{\mathbf{p}_i + \mathbf{p}_j}{2} with radius 20.dp + 28.dp * I:
+0.00: #7DD3FC (ice cyan) at alpha = 0.28f * I
+0.45: #0EA5E9 (electric sky blue) at alpha = 0.14f * I
+1.00: Color.Transparent
+
+
+Why Additive Stacking Is Essential: Two agents briefly crossing paths emit a whisper-subtle blue electrostatic glint. When all 12–16 agents converge tightly in Act IV, BlendMode.Plus automatically sums every overlapping pair into an incandescent cyan core—zero separate hardcoded "convergence glow" needed.
+
+3. Native Jetpack Compose Architecture (Zero Recomposition Loop)
+To hit a rock-solid 120fps on Android without fighting Compose's recomposition scheduler, enforce one golden rule: Compose measures the real UI once; a withFrameNanos simulation loop drives all animation strictly in the Layout/Draw phases.
+Layer Stack Overview
+Box(Modifier.fillMaxSize()) {
+    ├── Layer 1: Scrollable ORVA "About Us" Content (Column + verticalScroll)
+    │            Every tracked component attaches Modifier.agenticLayer(...)
+    ├── Layer 2: Full-Screen Overlay Canvas (Modifier.fillMaxSize(), non-touch-consuming)
+    │            Draws wireframes, W×H pills, red smart guides, live GraphicsLayer clones,
+    │            additive blue proximity blooms, star glints, and all agent cursors
+    └── Layer 3: Compact Floating Telemetry Pill (bottom-center)
+                 Shows agent dots, "64 / 92 layers", Touring toggle, Skip / Replay
+}
+
+4 Compose-Specific Techniques That Make This Effortless
+1. Real Coordinate Registration (Scroll- & Inset-Proof)
+Attach a custom modifier to every participating Composable (Modifier.agenticLayer(id, kind, parentId, cloneGroup, cloneIndex)). Capture coordinates relative to the root AgenticBuildContainer, not raw screen pixels, so status bars, cutouts, and scroll offsets never drift:
+Modifier.onGloballyPositioned { coords ->
+    val root = orchestrator.rootCoordinates ?: return@onGloballyPositioned
+    if (coords.isAttached && root.isAttached) {
+        // Always accurate in overlay Canvas space, automatically reflecting scroll!
+        val rectInOverlay: Rect = root.localBoundingBoxOf(coords, clipBounds = false)
+        orchestrator.updateLayerBounds(id, rectInOverlay)
+    }
+}
+
+
+Visibility Masking Without Breaking Measure: Never toggle if (visible) Composable()—that destroys layout geometry and causes scroll jumps. Instead, read the layer's mutable reveal progress inside **Modifier.graphicsLayer { alpha = layerState.alpha; colorFilter = layerState.colorFilter }** (Draw-phase only, 0 recompositions).
+
+2. True Live Component Cloning via rememberGraphicsLayer() (Compose 1.7+)
+You don't need dummy grey boxes during Alt-drag cloning. Record the actual rendered pixels of cloneIndex == 0 into a GPU-backed GraphicsLayer:
+val templateLayer = rememberGraphicsLayer()
+
+// On cloneIndex == 0:
+Modifier.drawWithContent {
+    templateLayer.record { this@drawWithContent.drawContent() }
+    drawLayer(templateLayer)
+}
+
+When a Duplicator agent drags a clone to Slot 1..N, the overlay Canvas simply translates to the agent's Bezier position, calls **drawLayer(templateLayer)**, and strokes a 1.dp #FF3B30 border around it. You get the exact live overlapping card-drag from 00:50.6 at near-zero GPU cost.
+3. Zero-Jitter Rich Text Streaming & Exact Caret Tracking (TextLayoutResult)
+Slicing a string character-by-character (text.take(n)) causes ugly word-wrap jumping as words grow past line widths. Instead, keep the full AnnotatedString measured at all times and mask the untyped tail with Color.Transparent:
+fun AnnotatedString.maskedReveal(visibleChars: Int): AnnotatedString = buildAnnotatedString {
+    append(this@maskedReveal)
+    if (visibleChars < length) {
+        addStyle(SpanStyle(color = Color.Transparent), start = visibleChars, end = length)
+    }
+}
+
+Pair this with onTextLayout = { layoutResult -> orchestrator.registerTextLayout(id, layoutResult) }:
+
+Exact Live Caret: layoutResult.getBoundingBox(visibleChars - 1) gives the exact (x, y, height) of the active character so the #0D99FF caret and I-beam cursor track multi-line wraps to the sub-pixel.
+Exact Multi-Line Cmd+A Highlights: Iterate 0 until layoutResult.lineCount using getLineLeft(i), getLineRight(i), getLineTop(i), getLineBottom(i) to paint crisp, per-line translucent blue selection bars during clone overwrites.
+
+4. Offscreen Additive Blue Lighting (BlendMode.Plus + Optional AGSL)
+
+Universal Android (API 24+): Render the proximity glow pass inside Modifier.graphicsLayer(compositingStrategy = CompositingStrategy.Offscreen) using drawCircle(brush = Brush.radialGradient(...), blendMode = BlendMode.Plus) before drawing the crisp cursor paths on top with BlendMode.SrcOver.
+Android 13+ (API 33+) Upgrade: You can replace the pairwise radial circles with a ~20-line AGSL RuntimeShader that computes a smooth cyan-blue metaball energy field across all agent positions in a single fragment pass—creating luminous liquid-electric bridges whenever 2+ cursors graze each other.
+
+4. The 4-Act Choreography for ORVA’s "About Us"
+
+
+
+Act
+Duration (Target)
+Team Behavior & Physics
+Scroll & Native Android Feedback
+
+
+
+Act I: Studio Wake & Orbital Scan
+1.8s – 2.5s
+Obsidian canvas (#000000) around the centered ORVA monogram. 12–16 agents enter in 2–3 tight Boid sub-flocks (not a uniform circle), banking tightly around the emblem while onGloballyPositioned finishes indexing every layer & clone group.
+Keep Act I snappy (~2.0s—mobile users are less patient than desktop portfolio browsers). Soft rising PRIMITIVE_LOW_TICK pulse on lock-in.
+
+
+Act II: Above-the-Fold Burst
+2.5s – 4.0s
+Sub-flocks shatter outward into + crosshairs, pulling the ORVA Hero header, mission copy, and 4-stage hero visual concurrently. First red column guides flash across the screen margins.
+Viewport anchored at scroll = 0. Subtle PRIMITIVE_TICK (scale = 0.15f) on major container snaps.
+
+
+Act III: Touring Assembly & Touch Yield
+~12s – 20s (scales with content)
+Section-by-section construction: Architects frame sections → Duplicators Alt-drag ORVA value/pillar/team cards via GraphicsLayer → Typographers overwrite cloned cards in parallel.
+Smart Auto-Scroll (Touring): Gently tracks activeFrontierY - viewportH * 0.42f via scrollState.scrollBy(v * dt). Instant Human Override: A NestedScrollConnection detects the first finger drag, yields immediately to manual scroll, and switches idle agents into lazy Boid inspection whenever the user stops scrolling.
+
+
+Act IV: Convergence & Living Post-Build
+1.8s + Persistent
+Final layer completes (N / N layers). All agents drop tools, converge into one tight high-cohesion flock (igniting the bright cyan-blue proximity core), sweep up over ORVA’s CTA, and settle gracefully.
+Android Exclusive Touch Magic: Once finished, keep 3–4 translucent idle agents gently alive—when a user drags a finger across the "About Us" page, nearby agents curiously drift near the fingertip, sparking the subtle blue contact glow where finger meets cursor, and scatter softly on a fast fling.
+
+
+5. Production Guardrails That Keep It Extraordinary (Not Annoying)
+
+Repeat-Visit Respect: Play the full build automatically on the first visit to ORVA’s "About Us" (persisted in DataStore). On subsequent visits, render the finished page instantly with a subtle "Replay Build" pill in the top corner—so returning users never feel trapped behind an animation.
+System Accessibility: Check Settings.Global.ANIMATOR_DURATION_SCALE == 0f (Android’s reduced-motion equivalent). If animations are disabled at the OS level, skip directly to the completed state.
+Subtle Tactile Haptics (Android’s Unfair Advantage): Use VibrationEffect.Composition (API 30+, throttled to max 1 pulse per 80ms so it never buzzes muddily) with whisper-light PRIMITIVE_TICK (0.12–0.20f) strictly on red smart-guide snaps and clone drops. It makes the design team feel physically present inside the phone glass.
+1–2 Micro-Correction Beats: Script one deliberate "human" moment—for instance, on ORVA’s headline stat or tagline, an agent drags a pill 12.dp wide, pauses 90ms, nudges it back until the red alignment guide snaps, or backspaces 3 characters on a typo before finishing. That single beat sells the illusion of real intelligence more than ten extra particle effects.
+
+Would you like me to map out the exact Kotlin state models (Agent, BuildLayer, CloneGroup, SmartGuide) and the withFrameNanos DAG scheduler first, or start by structuring the ORVA "About Us" section layout so its cards, typography, and clone groups are optimized for this choreography from day one?
+
+
+You:
+The animation running on saai.pro is not a custom-coded bespoke timeline—it is an embedded adaptation of **Swarm Rebuild** (DhvanilPatel/swarm-cursors), an open-source DOM-rebuilding engine whose motion system is adapted directly from Joel Califa’s original Swarm site (califa/swarm-site).
+Every detail in the screen recording matches the exact architecture and UI strings of that engine:
+
+Verbatim HUD Controls: The bottom pill in the recording cycles through Scanning page... → 16 agents | 8 / 252 layers → Tour / Touring → 1× → Tap for sound → Built by 16 agents in 45.1s → Go live / Replay / ×—matching Swarm Rebuild's exact toolbar state machine (Tour, 1×/2×/3×, Tap for sound for Chrome's audio unlock, Go live to dismiss the rebuild overlay, and Replay).
+Live Runtime Re-Scanning Proof: When Chrome switches from mobile to Desktop mode (00:07.3–00:10.0), the layer count jumps dynamically from 246 layers to 252 layers, and the centered intro emblem automatically pulls the site's SV favicon for the cursors to orbit. Even the stray 412 × 732 string captured in Google's search index of saai.pro is a remnant of the live W × H viewport/selection dimension badge.
+
+1. Complete Reverse-Engineered Pipeline (saai.pro / swarm.js)
+Under the hood, the engine operates as a 5-stage visual compiler that converts any live webpage into an animated design-tool replay.
+Stage 1: Hidden Scroll Pass & Live DOM Blueprint Compiler
+Before a single cursor draws anything, the engine runs a fast, hidden scroll pass to trigger lazy-loaded images and scroll-reveal animations. It then walks the live DOM (including open shadow roots) and compiles visible elements into six primitive task types (capped around ~4,000 layers / 40,000px on very long pages):
+
+
+
+Blueprint Primitive
+Source DOM Elements
+Compiled Task Behavior
+
+
+
+**rect**
+Boxes with fills, borders, radii, shadows, gradients, masks, or backdrop-filter blur
+Crosshair drag with live #0D99FF bounding box + W × H badge (388 × 478, 997 × 860) + gray skeleton, then real fill fades in
+
+
+**media**
+<img>, <svg>, <video>, <canvas>, <iframe>
+Crosshair drag + gray placeholder + top-to-bottom reveal sweep (with 4-point corner glints seen on the hero portrait at 00:11.0–00:13.0)
+
+
+**text**
+Text blocks cloned with computed styles (fonts, links, inline code, icons, ::before/::after)
+Text box drag + I-beam typing with blinking caret; display headings start at 18px and step up in size
+
+
+**line**
+Single-side borders and <hr> dividers
+Pen-tool pathing—drops anchor points and pulls a rubber-band segment to the cursor (visible on the footer divider at 00:50.0–00:50.3)
+
+
+**duplicate**
+Repeated sibling patterns (nav links, metric tiles, Systems Matrix cards, footer links)
+Compiles index [0] as Master and [1..N] as Duplicates (⌥-drag clone + red spacing measurements + retype/restyle)
+
+
+**guide**
+Shared left edges and baselines detected across multiple blueprint layers
+Slides in Figma-style rulers, drags out a hairline #FF3B30 red alignment guide, and snaps text/cards onto it
+
+
+Stage 2: Shadow-Root Blank Canvas Isolation
+Crucially, saai.pro's engine does not animate the real interactive DOM elements in place. Instead, it mounts a full-viewport layer isolated inside a Shadow Root (preventing host CSS collisions), fills it with the page's background color, and reconstructs a static visual replica inside that shadow layer.
+
+Why Go live exists at 00:55.0: Because the rebuilt elements live inside an isolated visual layer (where the host page's own JS event listeners don't run), clicking **Go live** fades out the shadow-root reconstruction to reveal the real, clickable webpage underneath.
+
+Stage 3: Generator-Driven Per-Cursor Choreography
+The reason the cursor actions look effortlessly stateful instead of rigid CSS keyframes is that every cursor executes a small JavaScript generator script (function*) per task:
+
+Dependency Unlocking: Tasks unlock top-down as the viewport scrolls; child layers wait for their parent rect, and duplicate tasks wait for their master to finish.
+Dynamic Swarm Scaling: Scrolling faster recruits more cursors to keep pace with the frontier; toggling **Tour** hands camera control to an auto-scroller paced to the swarm's active build line.
+The ⌥-Drag Clone Sequence (00:11.7, 00:51.0���00:53.0): A cursor selects the completed master card, holds Alt/⌥ to drag a ghost clone into the sibling slot while flashing #FF3B30 bounding outlines and spacing ticks, drops it, and immediately unlocks parallel agents to highlight-overwrite the text, swap images, or change accents.
+
+Stage 4: Boid Physics & Proximity Lighting
+During the intro (00:05.6–00:09.3) and finale (00:54.7–00:59.7), cursors disengage from task generators and switch to a flocking physics loop combining orbital pull (around the favicon during scan), alignment, separation, and mouse-avoiding/mouse-following attraction at the end.
+
+Where cursors converge tightly (e.g., overlapping on the navbar at 00:11.6–00:12.0 and clustering during the victory swarm at 00:55.0–00:56.7), overlapping cursor auras/selection highlights stack additively into that crisp blue luminescence.
+
+Stage 5: Procedural Web Audio Synthesizer (Zero Audio Files)
+That Tap for sound button in the HUD unlocks a 100% synthesized Web Audio API soundscape with no external .mp3/.wav assets:
+
+Tactile Foley: Typing synthesizes a mechanical keyboard (sharp transient click layered over a short low-mid "thock," pitched deeper on spaces), paired with press-and-release mouse clicks, crisp snap clicks on ruler guides, and upward pitch ticks as large headings step up from 18px.
+Spatial Musical Grid: Completed boxes, images, and duplicates trigger sparse, quiet glass-piano notes from the E major pentatonic scale, quantized to an eighth-note grid:
+Size → Octave: Large structural containers play low notes; tiny badges/pills play high notes.
+X-Position → Pitch & Stereo Pan: Pitch rises left-to-right, and every sound is stereo-panned to its cursor's horizontal screen coordinate.
+
+
+Act Transitions: Airy swell on page dissolve → short arpeggio when the swarm fans out → soft E major chord on build completion → falling sweep when clicking Go live.
+
+2. Critical Licensing & Architecture Findings Before You Use It
+Before copying code from saai.pro or swarm-cursors, there are two major things you should know:
+
+No Open-Source License on the Original Repos: Neither Joel Califa's califa/swarm-site nor Dhvanil Patel's DhvanilPatel/swarm-cursors carries an open-source license file, and the swarm-cursors README explicitly notes to check with both authors before reusing the code.
+MIT-Licensed Cleanroom Alternative Exists: Lenvio Software released **agent-swarm-build** (agentic-build.lenvio.dev, ~48 KB gzipped, zero dependencies, MIT-licensed), which specifically fixes the Shadow-Root visual-clone limitation by animating directly over the real DOM with 0.00 CLS, SEO-safe bot bypass, prefers-reduced-motion support, and no Go live handoff delay.
+
+3. How to Architect an Even Better Cleanroom Version
+If you want to build your own extraordinary version from scratch rather than dropping in an off-the-shelf script, combine the best mechanics of both architectures:
+
+
+
+Architectural Choice
+saai.pro / swarm-cursors Approach
+Your Upgraded Cleanroom Engine
+
+
+
+DOM Strategy
+Visual clone inside a Shadow Root (requires Go live handoff; interactive widgets frozen until exit)
+Native DOM Masking (opacity: 0) + Single <canvas> Overlay: Real links, hover states, and React/Astro hydration work live the millisecond each layer finishes—zero Go live wall and 0.00 CLS
+
+
+Cursor Engine
+JS Generators (function*) per task
+Keep JS Generators + Coroutine Timing: Generators are the cleanest possible way to script multi-beat actions (moveTo → crosshairDrag → snapGuide → pause → type) without callback soup
+
+
+Contact Glow
+Subtle overlap glow during convergence
+Explicit Pairwise Electrostatic Shader/Canvas Bloom: Additive (globalCompositeOperation = 'lighter') radial cyan-blue bloom whenever cursor distance d < 44\text{px}, plus interactive sparks when the visitor's own cursor touches an agent post-build
+
+
+Audio
+E major pentatonic quantized to eighth notes + mechanical clicks
+Keep the spatial E-major pentatonic + mechanical click engine, and add a gentle low-pass filter sweep tied to scroll velocity + crystalline harmonic shimmer scaled to cursor-contact glow intensity
+
+
+Craft Polish
+Pure algorithmic execution
+2–3 Scripted "Human-Agent" Micro-Corrections: Have an agent intentionally oversize one hero card by 16px, pause 100ms, and nudge it back until the red smart guide clicks into place, or backspace one typo in your hero tagline
+
+
+If you'd like to build this cleanroom engine for your portfolio, tell me your frontend stack (vanilla HTML/JS, React/Next.js, Astro, etc.) and I can write the core DOM Blueprint Scanner + Generator Cursor Scheduler + Canvas Renderer (wireframes, pen tool, red guides, blue contact glow) ready to drop into your project.
+
+
+ChatGPT:
+The new model changes the implementation in one important way: we should simulate a real design-team task engine, not just animate five visual cursor styles. I’m adopting the five roles and the parent/clone dependencies, while setting ORVA’s target to 16 total agents with at most 6–8 actively building inside the phone viewport. The Compose page itself remains the source of truth; temporary GraphicsLayer captures can serve as the rebuild overlay, then dissolve to reveal the live page.
+
+
+You:
+Building this in Native Kotlin + Jetpack Compose gives you a massive advantage over the web version: zero DOM thrashing, native 120Hz Skia/Impeller rendering, Kotlin Coroutines instead of JS generators, and native Android haptics.
+To keep the animation locked at 120fps with 0 recompositions/sec, the engine uses 3 rules:
+
+Content-Space Registry: A custom Modifier.agentLayer(...) reads each Composable's real boundsInRoot() once via onGloballyPositioned, converts it to scroll-independent content coordinates (y + scrollState.value), and registers it in a DAG (Parent → Child, Master → Clones).
+Draw-Phase-Only Animation: Layer reveal opacity is read strictly inside Modifier.graphicsLayer { alpha = ... } (never in Composition). All 16 cursors, red guides, blue typing boxes, and additive blue proximity glows render in one full-screen Canvas driven by a single frameTick inside withFrameNanos.
+Coroutine Choreography: Each of the 16 agents runs a structured Kotlin suspend loop (moveToArc → dragWireframe → snapRedGuides → streamText), seamlessly switching between Boid Flocking (Act I & IV), Task Execution (Act II & III), and Reynolds Idle Wander when the user stops scrolling.
+
+1. Core State, Geometry & Effect Primitives (AgenticModels.kt)
+package com.portfolio.agentic
+
+import androidx.compose.runtime.*
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.graphics.Color
+import kotlin.math.*
+
+enum class LayerKind { CONTAINER, MEDIA, TEXT, LINE }
+enum class CursorMode { BOID_FLIGHT, POINTER, CROSSHAIR, I_BEAM }
+enum class BuildAct { SCANNING, BUILDING, FINISHED }
+
+enum class LayerPhase { HIDDEN, BUILDING, CLONED_MASTER_TEXT, REVEALED }
+
+class TrackedLayer(
+    val id: String,
+    val kind: LayerKind,
+    val parentId: String? = null,
+    val cloneGroupId: String? = null,
+    val cloneIndex: Int = 0, // 0 = Master, >0 = Alt-Drag Clone
+    var contentRect: Rect = Rect.Zero,
+    val targetText: String = "",
+    val masterText: String = ""
+) {
+    // Mutable state read ONLY inside graphicsLayer or text draw lambdas
+    var revealAlpha by mutableFloatStateOf(0f)
+    var visibleCharCount by mutableIntStateOf(0)
+    var showingMasterCloneText by mutableStateOf(false)
+    var highlightOverwriteActive by mutableStateOf(false)
+    var phase: LayerPhase = LayerPhase.HIDDEN
+    var claimedByAgent: Int? = null
+}
+
+class AgentCursor(
+    val id: Int,
+    val color: Color,
+    var pos: Offset,
+    var vel: Offset = Offset.Zero,
+    var angleRad: Float = -0.6f,
+    var mode: CursorMode = CursorMode.BOID_FLIGHT,
+    var busy: Boolean = false,
+    var wanderAngle: Float = id * 0.7f
+)
+
+data class ActiveWireframe(
+    val agentId: Int,
+    var currentRect: Rect, // Content-space rect
+    val showDimensions: Boolean = true,
+    val isTextEditBox: Boolean = false
+)
+
+data class SmartGuide(
+    val isVertical: Boolean,
+    val position: Float,     // x (if vertical) or content-y (if horizontal)
+    val spanStart: Float,
+    val spanEnd: Float,
+    val fullViewport: Boolean = false,
+    val createdAtMs: Long
+)
+
+data class CloneGhost(
+    val id: String,
+    var rect: Rect, // Content-space rect flying from master -> target
+    var alpha: Float = 0.85f
+)
+
+data class MediaGlint(
+    val pos: Offset, // Content-space
+    val createdAtMs: Long,
+    val durationMs: Long = 550L,
+    val maxRadiusPx: Float = 18f
+)
+
+val AgentPalette = listOf(
+    Color(0xFFFF6B6B), Color(0xFF4ECDC4), Color(0xFF45B7D1), Color(0xFFFFBE0B),
+    Color(0xFFFB5607), Color(0xFFFF006E), Color(0xFF8338EC), Color(0xFF3A86FF),
+    Color(0xFF06D6A0), Color(0xFFFFD166), Color(0xFFEF476F), Color(0xFF118AB2),
+    Color(0xFFA8DADC), Color(0xFFE07A5F), Color(0xFF81B29A), Color(0xFFF2CC8F)
+)
+
+2. The Engine Controller & Coroutine Scheduler (AgenticEngine.kt)
+This handles the 4-Act state machine, quadratic Bezier arc flight (eliminating robotic straight lines), pairwise boid forces, Alt-drag cloning, Cmd+A highlight-before-overwrite, and red alignment guide triggers.
+package com.portfolio.agentic
+
+import androidx.compose.foundation.ScrollState
+import androidx.compose.runtime.*
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Rect
+import kotlinx.coroutines.*
+import kotlin.math.*
+import kotlin.random.Random
+
+class AgenticEngine(
+    val scrollState: ScrollState,
+    val agentCount: Int = 16
+) {
+    val layers = LinkedHashMap<String, TrackedLayer>()
+    val agents = mutableListOf<AgentCursor>()
+    val activeWireframes = mutableMapOf<Int, ActiveWireframe>()
+    val smartGuides = mutableListOf<SmartGuide>()
+    val cloneGhosts = mutableMapOf<String, CloneGhost>()
+    val mediaGlints = mutableListOf<MediaGlint>()
+
+    var act by mutableStateOf(BuildAct.SCANNING)
+    var completedCount by mutableIntStateOf(0)
+    var totalCount by mutableIntStateOf(0)
+    var touringEnabled by mutableStateOf(true)
+    var speedMultiplier by mutableFloatStateOf(1f)
+    var elapsedSeconds by mutableFloatStateOf(0f)
+
+    // Touch-as-Agent-#17 (user finger position in content-space, null when lifted)
+    var userTouchContentPos: Offset? = null
+
+    // Read ONLY inside Canvas draw lambda -> 0 recompositions/sec
+    var frameTick by mutableLongStateOf(0L)
+        private set
+
+    var viewportWidthPx: Float = 1080f
+    var viewportHeightPx: Float = 2400f
+
+    private var clockMs: Long = 0L
+    private var buildStartMs: Long = 0L
+
+    init {
+        repeat(agentCount) { i ->
+            val theta = (i.toFloat() / agentCount) * (2f * PI.toFloat())
+            agents += AgentCursor(
+                id = i,
+                color = AgentPalette[i % AgentPalette.size],
+                pos = Offset(540f + cos(theta) * 140f, 900f + sin(theta) * 140f)
+            )
+        }
+    }
+
+    fun registerLayer(
+        id: String,
+        kind: LayerKind,
+        contentRect: Rect,
+        parentId: String?,
+        cloneGroupId: String?,
+        cloneIndex: Int,
+        targetText: String,
+        masterText: String
+    ) {
+        val existing = layers[id]
+        if (existing != null) {
+            existing.contentRect = contentRect
+        } else {
+            layers[id] = TrackedLayer(
+                id = id, kind = kind, parentId = parentId,
+                cloneGroupId = cloneGroupId, cloneIndex = cloneIndex,
+                contentRect = contentRect, targetText = targetText,
+                masterText = masterText
+            )
+            totalCount = layers.size
+        }
+    }
+
+    // Main 120Hz Physics Loop (call inside LaunchedEffect)
+    suspend fun runSimulation(scope: CoroutineScope, onSnapHaptic: () -> Unit) {
+        var lastNanos = 0L
+
+        // Act I: Orbital Scan around center monogram (2.2s)
+        val scanJob = scope.launch {
+            delay(2200L)
+            act = BuildAct.BUILDING
+            buildStartMs = clockMs
+            startAgentWorkers(scope, onSnapHaptic)
+        }
+
+        while (currentCoroutineContext().isActive) {
+            withFrameNanos { frameNanos ->
+                val dt = if (lastNanos == 0L) 0.016f
+                else ((frameNanos - lastNanos) / 1_000_000_000f).coerceIn(0.001f, 0.05f)
+                lastNanos = frameNanos
+                clockMs += (dt * 1000f).toLong()
+
+                when (act) {
+                    BuildAct.SCANNING -> updateOrbitalBoids(dt)
+                    BuildAct.BUILDING -> {
+                        elapsedSeconds = (clockMs - buildStartMs) / 1000f
+                        updateIdleWanderBoids(dt)
+                    }
+                    BuildAct.FINISHED -> updateVictoryFlock(dt)
+                }
+
+                // Prune expired guides (hold 110ms + fade 210ms = 320ms) & glints
+                smartGuides.removeAll { clockMs - it.createdAtMs > 320L }
+                mediaGlints.removeAll { clockMs - it.createdAtMs > it.durationMs }
+
+                frameTick = frameNanos
+            }
+        }
+        scanJob.cancel()
+    }
+
+    fun currentTimeMs(): Long = clockMs
+
+    // --- ACT I: Orbital Boids around screen center ---
+    private fun updateOrbitalBoids(dt: Float) {
+        val center = Offset(viewportWidthPx * 0.5f, scrollState.value + viewportHeightPx * 0.45f)
+        for (a in agents) {
+            a.mode = CursorMode.BOID_FLIGHT
+            val toCenter = center - a.pos
+            val dist = toCenter.getDistance().coerceAtLeast(1f)
+            val radialDir = toCenter / dist
+            val tangent = Offset(-radialDir.y, radialDir.x)
+
+            val targetRadius = 110f + sin(clockMs * 0.003f + a.id) * 45f
+            val radialForce = radialDir * ((dist - targetRadius) * 4.5f)
+            val swirlForce = tangent * 360f
+            val sepForce = computeSeparation(a, radius = 48f, strength = 220f)
+
+            a.vel = (a.vel + (radialForce + swirlForce + sepForce) * dt).clampLength(520f)
+            a.pos += a.vel * dt
+            a.angleRad = lerpAngle(a.angleRad, atan2(a.vel.y, a.vel.x), (dt * 12f).coerceAtMost(1f))
+        }
+    }
+
+    // --- ACT III: Organic Reynolds Wander for idle agents (no frozen cursors!) ---
+    private fun updateIdleWanderBoids(dt: Float) {
+        val minY = scrollState.value.toFloat() + 60f
+        val maxY = scrollState.value + viewportHeightPx - 120f
+
+        for (a in agents) {
+            if (a.busy) continue
+            a.mode = CursorMode.BOID_FLIGHT
+            a.wanderAngle += (Random.nextFloat() - 0.5f) * 3.5f * dt
+            var steer = Offset(cos(a.wanderAngle), sin(a.wanderAngle)) * 110f
+            steer += computeSeparation(a, radius = 65f, strength = 140f)
+
+            // Soft pull back into active viewport
+            if (a.pos.y < minY) steer += Offset(0f, (minY - a.pos.y) * 3f)
+            if (a.pos.y > maxY) steer += Offset(0f, (maxY - a.pos.y) * 3f)
+            if (a.pos.x < 40f) steer += Offset((40f - a.pos.x) * 3f, 0f)
+            if (a.pos.x > viewportWidthPx - 40f) steer += Offset((viewportWidthPx - 40f - a.pos.x) * 3f, 0f)
+
+            a.vel = (a.vel + steer * dt).clampLength(160f)
+            a.pos += a.vel * dt
+            if (a.vel.getDistance() > 8f) {
+                a.angleRad = lerpAngle(a.angleRad, atan2(a.vel.y, a.vel.x), (dt * 8f).coerceAtMost(1f))
+            }
+        }
+    }
+
+    // --- ACT IV: Tight Victory Convergence (triggers strong blue contact glow!) ---
+    private fun updateVictoryFlock(dt: Float) {
+        val t = clockMs * 0.0018f
+        val defaultAttractor = Offset(
+            viewportWidthPx * (0.5f + 0.28f * cos(t)),
+            scrollState.value + viewportHeightPx * (0.42f + 0.18f * sin(t * 1.4f))
+        )
+        // If user touches the screen post-build, the swarm playfully converges near their finger!
+        val attractor = userTouchContentPos ?: defaultAttractor
+
+        for (a in agents) {
+            a.mode = CursorMode.BOID_FLIGHT
+            val toTarget = attractor - a.pos
+            val cohesion = toTarget * 3.4f
+            val sep = computeSeparation(a, radius = 26f, strength = 190f) // Tight radius = strong blue glow!
+            val swirl = Offset(-toTarget.y, toTarget.x) * 0.65f
+
+            a.vel = (a.vel + (cohesion + sep + swirl) * dt).clampLength(480f)
+            a.pos += a.vel * dt
+            a.angleRad = lerpAngle(a.angleRad, atan2(a.vel.y, a.vel.x), (dt * 10f).coerceAtMost(1f))
+        }
+    }
+
+    private fun computeSeparation(self: AgentCursor, radius: Float, strength: Float): Offset {
+        var force = Offset.Zero
+        for (other in agents) {
+            if (other.id == self.id) continue
+            val diff = self.pos - other.pos
+            val d = diff.getDistance()
+            if (d in 0.1f..radius) {
+                force += (diff / d) * ((1f - d / radius) * strength)
+            }
+        }
+        return force
+    }
+
+    // --- COROUTINE TASK DISPATCHER ---
+    private fun startAgentWorkers(scope: CoroutineScope, onSnapHaptic: () -> Unit) {
+        // Touring Auto-Scroll Coroutine
+        scope.launch {
+            while (act == BuildAct.BUILDING) {
+                if (touringEnabled) {
+                    val nextUnbuilt = layers.values
+                        .filter { it.phase != LayerPhase.REVEALED && it.contentRect != Rect.Zero }
+                        .minByOrNull { it.contentRect.top }
+                    if (nextUnbuilt != null) {
+                        val targetScroll = (nextUnbuilt.contentRect.top - viewportHeightPx * 0.35f)
+                            .toInt().coerceIn(0, scrollState.maxValue)
+                        if (abs(targetScroll - scrollState.value) > 40) {
+                            scrollState.animateScrollTo(targetScroll)
+                        }
+                    }
+                }
+                delay(180L)
+            }
+        }
+
+        // Launch 16 independent worker coroutines
+        agents.forEach { agent ->
+            scope.launch {
+                // Staggered burst scatter out of orbital scan
+                delay((agent.id * 28L / speedMultiplier).toLong())
+                while (act == BuildAct.BUILDING) {
+                    val task = claimNextReadyLayer(agent)
+                    if (task != null) {
+                        agent.busy = true
+                        executeLayerTask(agent, task, onSnapHaptic)
+                        agent.busy = false
+                        checkCompletion(scope)
+                    } else {
+                        delay(45L)
+                    }
+                }
+            }
+        }
+    }
+
+    private fun claimNextReadyLayer(agent: AgentCursor): TrackedLayer? {
+        val visibleTop = scrollState.value - 120f
+        val visibleBottom = scrollState.value + viewportHeightPx + 180f
+
+        val candidate = layers.values
+            .filter { layer ->
+                if (layer.phase != LayerPhase.HIDDEN || layer.claimedByAgent != null) return@filter false
+                if (layer.contentRect == Rect.Zero) return@filter false
+                // Viewport-chunked gating (pauses build when user stops scrolling!)
+                if (layer.contentRect.top > visibleBottom || layer.contentRect.bottom < visibleTop) return@filter false
+                // Parent dependency check
+                val parentOk = layer.parentId == null || layers[layer.parentId]?.phase == LayerPhase.REVEALED
+                // Clone master dependency check (Master [0] must finish before Clones [1..N])
+                val masterOk = if (layer.cloneGroupId != null && layer.cloneIndex > 0) {
+                    layers.values.any {
+                        it.cloneGroupId == layer.cloneGroupId &&
+                            it.cloneIndex == 0 &&
+                            it.phase == LayerPhase.REVEALED
+                    }
+                } else true
+                parentOk && masterOk
+            }
+            // Pick closest ready layer to this cursor for natural locality
+            .minByOrNull { (it.contentRect.topLeft - agent.pos).getDistance() }
+
+        candidate?.claimedByAgent = agent.id
+        candidate?.phase = LayerPhase.BUILDING
+        return candidate
+    }
+
+    private suspend fun executeLayerTask(
+        agent: AgentCursor,
+        layer: TrackedLayer,
+        onSnapHaptic: () -> Unit
+    ) {
+        val rect = layer.contentRect
+        val isClone = layer.cloneGroupId != null && layer.cloneIndex > 0
+
+        if (isClone) {
+            executeAltDragCloneAndMutate(agent, layer, onSnapHaptic)
+            return
+        }
+
+        when (layer.kind) {
+            LayerKind.CONTAINER, LayerKind.MEDIA -> {
+                // 1. Fly in arc to top-left corner -> switch to '+' crosshair
+                moveToArc(agent, rect.topLeft, durationMs = scaled(260L), endMode = CursorMode.CROSSHAIR)
+                delay(scaled(40L))
+
+                // 2. Drag wireframe diagonally with live W x H pill
+                val dragDuration = scaled(320L)
+                animateProgress(dragDuration) { t ->
+                    val e = easeOutExpo(t)
+                    val curW = rect.width * e
+                    val curH = rect.height * e
+                    val liveRect = Rect(rect.left, rect.top, rect.left + curW, rect.top + curH)
+                    agent.pos = liveRect.bottomRight
+                    activeWireframes[agent.id] = ActiveWireframe(agent.id, liveRect, showDimensions = true)
+                }
+
+                // 3. Snap & Fire Red Smart Guides (Full-viewport left margin lock!)
+                fireRedSmartGuides(rect, fullViewportLeftLock = rect.width > viewportWidthPx * 0.45f)
+                onSnapHaptic()
+
+                // 4. Materialize real Composable & corner glints for media
+                if (layer.kind == LayerKind.MEDIA) {
+                    spawnMediaGlints(rect)
+                }
+                animateProgress(scaled(150L)) { t -> layer.revealAlpha = t }
+                activeWireframes.remove(agent.id)
+                layer.revealAlpha = 1f
+            }
+
+            LayerKind.TEXT -> {
+                moveToArc(agent, rect.topLeft + Offset(8f, rect.height * 0.5f), scaled(220L), CursorMode.I_BEAM)
+                activeWireframes[agent.id] = ActiveWireframe(agent.id, rect, showDimensions = false, isTextEditBox = true)
+                layer.revealAlpha = 1f
+
+                // Stream characters live with slight organic jitter
+                val len = layer.targetText.length.coerceAtLeast(1)
+                val perCharMs = (1000f / (85f * speedMultiplier)).toLong().coerceIn(4L, 28L)
+                for (i in 1..len) {
+                    layer.visibleCharCount = i
+                    // Cursor glides horizontally across the text box as it types
+                    val progress = i.toFloat() / len
+                    agent.pos = Offset(
+                        rect.left + rect.width * (progress % 1f).coerceIn(0.05f, 0.96f),
+                        rect.center.y
+                    )
+                    delay((perCharMs * Random.nextFloat().coerceIn(0.7f, 1.3f)).toLong().coerceAtLeast(2L))
+                }
+                delay(scaled(50L))
+                activeWireframes.remove(agent.id)
+            }
+
+            LayerKind.LINE -> {
+                // Pen-tool horizontal rubber-band draw
+                val start = Offset(rect.left, rect.center.y)
+                val end = Offset(rect.right, rect.center.y)
+                moveToArc(agent, start, scaled(200L), CursorMode.CROSSHAIR)
+                animateProgress(scaled(220L)) { t ->
+                    val e = easeOutCubic(t)
+                    val curX = lerp(start.x, end.x, e)
+                    agent.pos = Offset(curX, start.y)
+                    activeWireframes[agent.id] = ActiveWireframe(
+                        agent.id, Rect(start.x, start.y - 1f, curX, start.y + 1f), showDimensions = false
+                    )
+                }
+                layer.revealAlpha = 1f
+                activeWireframes.remove(agent.id)
+            }
+        }
+
+        layer.phase = LayerPhase.REVEALED
+        completedCount++
+    }
+
+    // --- SIGNATURE EFFECT: Alt-Drag Clone + Cmd+A Blue Highlight Overwrite ---
+    private suspend fun executeAltDragCloneAndMutate(
+        agent: AgentCursor,
+        layer: TrackedLayer,
+        onSnapHaptic: () -> Unit
+    ) {
+        val master = layers.values.firstOrNull {
+            it.cloneGroupId == layer.cloneGroupId && it.cloneIndex == 0
+        } ?: return
+        val fromRect = master.contentRect
+        val toRect = layer.contentRect
+
+        // 1. Grab Master in Upright Pointer mode
+        moveToArc(agent, fromRect.center, scaled(210L), CursorMode.POINTER)
+
+        // 2. Alt-Drag red-outlined Ghost from Master slot -> Target slot along subtle arc
+        val ghostId = layer.id
+        animateProgress(scaled(340L)) { t ->
+            val e = easeOutCubic(t)
+            val arcLift = sin(e * PI.toFloat()) * -28f
+            val curLeft = lerp(fromRect.left, toRect.left, e)
+            val curTop = lerp(fromRect.top, toRect.top, e) + arcLift
+            val liveRect = Rect(curLeft, curTop, curLeft + toRect.width, curTop + toRect.height)
+            cloneGhosts[ghostId] = CloneGhost(ghostId, liveRect)
+            agent.pos = liveRect.center
+        }
+
+        // 3. Snap into place with red alignment guides
+        cloneGhosts.remove(ghostId)
+        fireRedSmartGuides(toRect, fullViewportLeftLock = false)
+        onSnapHaptic()
+
+        // 4. Mount cloned master text first, then run Cmd+A Blue Highlight -> Overwrite!
+        layer.revealAlpha = 1f
+        if (layer.kind == LayerKind.TEXT && layer.masterText.isNotEmpty()) {
+            layer.showingMasterCloneText = true
+            layer.visibleCharCount = layer.masterText.length
+            delay(scaled(90L))
+
+            // Switch to I-Beam & flash translucent blue Cmd+A selection highlight (160ms beat)
+            agent.mode = CursorMode.I_BEAM
+            layer.highlightOverwriteActive = true
+            activeWireframes[agent.id] = ActiveWireframe(agent.id, toRect, showDimensions = false, isTextEditBox = true)
+            delay(scaled(160L))
+
+            // Wipe selection & stream unique replacement text
+            layer.highlightOverwriteActive = false
+            layer.showingMasterCloneText = false
+            layer.visibleCharCount = 0
+            val len = layer.targetText.length.coerceAtLeast(1)
+            val perCharMs = (1000f / (95f * speedMultiplier)).toLong().coerceIn(4L, 22L)
+            for (i in 1..len) {
+                layer.visibleCharCount = i
+                agent.pos = Offset(toRect.left + toRect.width * (i.toFloat() / len), toRect.center.y)
+                delay(perCharMs)
+            }
+            activeWireframes.remove(agent.id)
+        }
+
+        layer.phase = LayerPhase.REVEALED
+        completedCount++
+    }
+
+    private fun fireRedSmartGuides(rect: Rect, fullViewportLeftLock: Boolean) {
+        val now = clockMs
+        // Left-edge vertical alignment line
+        smartGuides += SmartGuide(
+            isVertical = true,
+            position = rect.left,
+            spanStart = if (fullViewportLeftLock) scrollState.value.toFloat() else rect.top - 48f,
+            spanEnd = if (fullViewportLeftLock) scrollState.value + viewportHeightPx else rect.bottom + 48f,
+            fullViewport = fullViewportLeftLock,
+            createdAtMs = now
+        )
+        // Top baseline horizontal tick
+        smartGuides += SmartGuide(
+            isVertical = false,
+            position = rect.top,
+            spanStart = rect.left - 36f,
+            spanEnd = rect.right + 36f,
+            createdAtMs = now
+        )
+    }
+
+    private fun spawnMediaGlints(rect: Rect) {
+        val corners = listOf(rect.topLeft, rect.topRight, rect.bottomLeft, rect.bottomRight)
+        corners.forEachIndexed { idx, pt ->
+            mediaGlints += MediaGlint(
+                pos = pt + Offset(if (idx % 2 == 0) 10f else -10f, if (idx < 2) 10f else -10f),
+                createdAtMs = clockMs + idx * 75L
+            )
+        }
+    }
+
+    private suspend fun moveToArc(
+        agent: AgentCursor,
+        target: Offset,
+        durationMs: Long,
+        endMode: CursorMode
+    ) {
+        val start = agent.pos
+        val delta = target - start
+        val dist = delta.getDistance().coerceAtLeast(1f)
+        val perp = Offset(-delta.y / dist, delta.x / dist)
+        val curveSign = if (agent.id % 2 == 0) 1f else -1f
+        val control = (start + target) * 0.5f + perp * (dist * 0.22f * curveSign)
+
+        agent.mode = CursorMode.BOID_FLIGHT
+        animateProgress(durationMs) { t ->
+            val e = easeInOutCubic(t)
+            val prev = agent.pos
+            val inv = 1f - e
+            agent.pos = start * (inv * inv) + control * (2f * inv * e) + target * (e * e)
+            val step = agent.pos - prev
+            if (step.getDistance() > 0.5f) {
+                agent.angleRad = atan2(step.y, step.x)
+            }
+        }
+        agent.pos = target
+        agent.mode = endMode
+    }
+
+    private suspend fun checkCompletion(scope: CoroutineScope) {
+        if (completedCount >= totalCount && totalCount > 0 && act == BuildAct.BUILDING) {
+            act = BuildAct.FINISHED
+            // Victory sweep back to Hero
+            scope.launch {
+                delay(800L)
+                scrollState.animateScrollTo(0)
+            }
+        }
+    }
+
+    private suspend fun animateProgress(durationMs: Long, onUpdate: (Float) -> Unit) {
+        val start = clockMs
+        val dur = durationMs.coerceAtLeast(16L)
+        while (true) {
+            val t = ((clockMs - start).toFloat() / dur).coerceIn(0f, 1f)
+            onUpdate(t)
+            if (t >= 1f) break
+            delay(8L)
+        }
+    }
+
+    private fun scaled(ms: Long) = (ms / speedMultiplier).toLong().coerceAtLeast(16L)
+}
+
+// --- Math Helpers ---
+private fun Offset.clampLength(maxLen: Float): Offset {
+    val d = getDistance()
+    return if (d > maxLen && d > 0f) this * (maxLen / d) else this
+}
+private fun lerp(a: Float, b: Float, t: Float) = a + (b - a) * t
+private fun lerpAngle(a: Float, b: Float, t: Float): Float {
+    var diff = (b - a + PI.toFloat()) % (2f * PI.toFloat()) - PI.toFloat()
+    if (diff < -PI.toFloat()) diff += 2f * PI.toFloat()
+    return a + diff * t
+}
+private fun easeOutExpo(t: Float) = if (t >= 1f) 1f else 1f - 2f.pow(-10f * t)
+private fun easeOutCubic(t: Float) = 1f - (1f - t).pow(3)
+private fun easeInOutCubic(t: Float) = if (t < 0.5f) 4f * t * t * t else 1f - (-2f * t + 2f).pow(3) / 2f
+
+3. High-Precision Canvas Overlay Renderer (AgenticOverlayCanvas.kt)
+This draws all four signature micro-interaction systems in a single GPU pass:
+
+Electrostatic Blue Cursor-Contact Lighting (BlendMode.Plus additive radial bloom whenever two cursors—or your finger—come within 44.dp).
+Razor-Sharp Red Smart Guides (#FF3B30, pixel-snapped to floor(v) + 0.5f).
+Blue Wireframes & Live W × H Dimension Badges (#0D99FF + 4 corner handles + live monospace pill).
+4-State Cursors (Velocity-aligned Boid Chevron, Upright Pointer, + Crosshair, I-Beam) & 4-Point Media Glints.
+
+package com.portfolio.agentic
+
+import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.*
+import androidx.compose.ui.graphics.*
+import androidx.compose.ui.graphics.drawscope.*
+import androidx.compose.ui.text.*
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+import kotlin.math.*
+
+private val FigmaBlue = Color(0xFF0D99FF)
+private val SmartGuideRed = Color(0xFFFF3B30)
+private val IceCyanCore = Color(0xFF7DD3FC)
+private val ElectricBlueBloom = Color(0xFF0EA5E9)
+
+@Composable
+fun AgenticOverlayCanvas(
+    engine: AgenticEngine,
+    modifier: Modifier = Modifier
+) {
+    val textMeasurer = rememberTextMeasurer()
+    val badgeStyle = remember {
+        TextStyle(
+            color = Color.White,
+            fontSize = 9.sp,
+            fontWeight = FontWeight.SemiBold,
+            fontFamily = FontFamily.Monospace
+        )
+    }
+
+    Canvas(modifier = modifier.fillMaxSize()) {
+        // Subscribe ONLY the Canvas draw phase to the 120Hz tick
+        val _tick = engine.frameTick
+        engine.viewportWidthPx = size.width
+        engine.viewportHeightPx = size.height
+
+        val scrollY = engine.scrollState.value.toFloat()
+        val nowMs = engine.currentTimeMs()
+
+        // 1. RED SMART GUIDES (Instant appear -> 110ms hold -> 210ms linear fade)
+        for (guide in engine.smartGuides) {
+            val age = nowMs - guide.createdAtMs
+            val alpha = when {
+                age < 110L -> 1f
+                else -> (1f - (age - 110L) / 210f).coerceIn(0f, 1f)
+            }
+            val color = SmartGuideRed.copy(alpha = alpha)
+            if (guide.isVertical) {
+                val x = floor(guide.position) + 0.5f
+                drawLine(
+                    color = color,
+                    start = Offset(x, guide.spanStart - scrollY),
+                    end = Offset(x, guide.spanEnd - scrollY),
+                    strokeWidth = 1f
+                )
+            } else {
+                val y = floor(guide.position - scrollY) + 0.5f
+                drawLine(
+                    color = color,
+                    start = Offset(guide.spanStart, y),
+                    end = Offset(guide.spanEnd, y),
+                    strokeWidth = 1f
+                )
+            }
+        }
+
+        // 2. ALT-DRAG CLONE GHOSTS (Red bounding frame + translucent preview)
+        for (ghost in engine.cloneGhosts.values) {
+            val r = ghost.rect.translate(0f, -scrollY)
+            drawRect(Color.White.copy(alpha = 0.08f), r.topLeft, r.size)
+            drawRect(SmartGuideRed.copy(alpha = ghost.alpha), r.topLeft, r.size, style = Stroke(1.5f))
+        }
+
+        // 3. BLUE WIREFRAME & TEXT EDIT BOXES + LIVE "W x H" PILL
+        val handleSize = 4.dp.toPx()
+        for (wf in engine.activeWireframes.values) {
+            val r = wf.currentRect.translate(0f, -scrollY)
+            if (!wf.isTextEditBox) {
+                drawRect(Color.White.copy(alpha = 0.09f), r.topLeft, r.size)
+            }
+            drawRect(FigmaBlue, r.topLeft, r.size, style = Stroke(width = 1.25.dp.toPx()))
+
+            // Four white/blue Figma corner handles
+            val corners = listOf(r.topLeft, r.topRight, r.bottomLeft, r.bottomRight)
+            for (c in corners) {
+                val hTopLeft = Offset(c.x - handleSize / 2f, c.y - handleSize / 2f)
+                drawRect(Color.White, hTopLeft, Size(handleSize, handleSize))
+                drawRect(FigmaBlue, hTopLeft, Size(handleSize, handleSize), style = Stroke(1.dp.toPx()))
+            }
+
+            // Live pixel dimension pill (e.g. "388 × 478")
+            if (wf.showDimensions && r.width > 24f && r.height > 16f) {
+                val label = "${r.width.roundToInt()} × ${r.height.roundToInt()}"
+                val measured = textMeasurer.measure(label, badgeStyle)
+                val padX = 5.dp.toPx()
+                val padY = 2.dp.toPx()
+                val pillW = measured.size.width + padX * 2
+                val pillH = measured.size.height + padY * 2
+                val pillLeft = r.center.x - pillW / 2f
+                val pillTop = r.bottom + 6.dp.toPx()
+
+                drawRoundRect(
+                    color = FigmaBlue,
+                    topLeft = Offset(pillLeft, pillTop),
+                    size = Size(pillW, pillH),
+                    cornerRadius = CornerRadius(3.dp.toPx())
+                )
+                drawText(measured, topLeft = Offset(pillLeft + padX, pillTop + padY))
+            }
+        }
+
+        // 4. 4-POINT MEDIA MATERIALIZATION GLINTS
+        for (g in engine.mediaGlints) {
+            val age = nowMs - g.createdAtMs
+            if (age !in 0..g.durationMs) continue
+            val t = age.toFloat() / g.durationMs
+            val scale = sin(t * PI.toFloat())
+            drawFourPointStar(
+                center = Offset(g.pos.x, g.pos.y - scrollY),
+                radius = g.maxRadiusPx * scale,
+                alpha = scale
+            )
+        }
+
+        // 5. ELECTROSTATIC BLUE CURSOR-CONTACT LIGHTING (Additive BlendMode.Plus)
+        val touchRadiusPx = 46.dp.toPx()
+        val points = buildList {
+            engine.agents.forEach { add(Offset(it.pos.x, it.pos.y - scrollY)) }
+            engine.userTouchContentPos?.let { add(Offset(it.x, it.y - scrollY)) }
+        }
+        for (i in points.indices) {
+            for (j in i + 1 until points.size) {
+                val a = points[i]
+                val b = points[j]
+                val d = (a - b).getDistance()
+                if (d < touchRadiusPx) {
+                    val p = (1f - d / touchRadiusPx).pow(2)
+                    val mid = (a + b) * 0.5f
+                    val glowRadius = (24.dp.toPx() + 28.dp.toPx() * p)
+                    drawCircle(
+                        brush = Brush.radialGradient(
+                            0.0f to IceCyanCore.copy(alpha = 0.34f * p),
+                            0.45f to ElectricBlueBloom.copy(alpha = 0.18f * p),
+                            1.0f to Color.Transparent,
+                            center = mid,
+                            radius = glowRadius
+                        ),
+                        radius = glowRadius,
+                        center = mid,
+                        blendMode = BlendMode.Plus
+                    )
+                }
+            }
+        }
+
+        // 6. THE 16 MULTI-STATE AGENT CURSORS
+        for (agent in engine.agents) {
+            val screenPos = Offset(agent.pos.x, agent.pos.y - scrollY)
+            when (agent.mode) {
+                CursorMode.BOID_FLIGHT -> drawChevronCursor(screenPos, agent.angleRad, agent.color)
+                CursorMode.POINTER -> drawChevronCursor(screenPos, -2.35f, agent.color) // Classic NW upright
+                CursorMode.CROSSHAIR -> drawCrosshairCursor(screenPos, agent.color)
+                CursorMode.I_BEAM -> drawIBeamCursor(screenPos)
+            }
+        }
+    }
+}
+
+private fun DrawScope.drawChevronCursor(pos: Offset, angleRad: Float, color: Color) {
+    val deg = Math.toDegrees(angleRad.toDouble()).toFloat() + 90f
+    val s = 7.dp.toPx()
+    val path = Path().apply {
+        moveTo(0f, -s * 1.4f)      // Tip
+        lineTo(s * 0.95f, s)       // Right wing
+        lineTo(0f, s * 0.45f)      // Inner notch
+        lineTo(-s * 0.95f, s)      // Left wing
+        close()
+    }
+    withTransform({
+        translate(pos.x, pos.y)
+        rotate(deg, pivot = Offset.Zero)
+    }) {
+        drawPath(path, color = color)
+        drawPath(path, color = Color.Black.copy(alpha = 0.85f), style = Stroke(width = 1.2.dp.toPx()))
+    }
+}
+
+private fun DrawScope.drawCrosshairCursor(pos: Offset, color: Color) {
+    val arm = 6.dp.toPx()
+    val gap = 2.dp.toPx()
+    val stroke = 1.5.dp.toPx()
+    drawLine(color, Offset(pos.x - arm, pos.y), Offset(pos.x - gap, pos.y), stroke)
+    drawLine(color, Offset(pos.x + gap, pos.y), Offset(pos.x + arm, pos.y), stroke)
+    drawLine(color, Offset(pos.x, pos.y - arm), Offset(pos.x, pos.y - gap), stroke)
+    drawLine(color, Offset(pos.x, pos.y + gap), Offset(pos.x, pos.y + arm), stroke)
+}
+
+private fun DrawScope.drawIBeamCursor(pos: Offset) {
+    val h = 7.dp.toPx()
+    val serif = 3.dp.toPx()
+    val c = Color(0xFFE0F2FE)
+    val sw = 1.3.dp.toPx()
+    drawLine(c, Offset(pos.x, pos.y - h), Offset(pos.x, pos.y + h), sw)
+    drawLine(c, Offset(pos.x - serif, pos.y - h), Offset(pos.x + serif, pos.y - h), sw)
+    drawLine(c, Offset(pos.x - serif, pos.y + h), Offset(pos.x + serif, pos.y + h), sw)
+}
+
+private fun DrawScope.drawFourPointStar(center: Offset, radius: Float, alpha: Float) {
+    val inner = radius * 0.18f
+    val path = Path().apply {
+        moveTo(center.x, center.y - radius)
+        lineTo(center.x + inner, center.y - inner)
+        lineTo(center.x + radius, center.y)
+        lineTo(center.x + inner, center.y + inner)
+        lineTo(center.x, center.y + radius)
+        lineTo(center.x - inner, center.y + inner)
+        lineTo(center.x - radius, center.y)
+        lineTo(center.x - inner, center.y - inner)
+        close()
+    }
+    drawPath(path, Color.White.copy(alpha = alpha * 0.9f))
+}
+
+4. Drop-In Modifiers & AgenticText (AgenticModifiers.kt)
+This is what keeps your actual portfolio screens clean. Attach Modifier.agentLayer(...) to any card, image, or divider, and use AgenticText for streaming copy with the Cmd+A blue overwrite highlight.
+package com.portfolio.agentic
+
+import androidx.compose.foundation.background
+import androidx.compose.material3.Text
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.composed
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.layout.boundsInRoot
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.text.TextStyle
+
+val LocalAgenticEngine = compositionLocalOf<AgenticEngine> {
+    error("Wrap your screen inside AgenticStage")
+}
+
+fun Modifier.agentLayer(
+    id: String,
+    kind: LayerKind = LayerKind.CONTAINER,
+    parentId: String? = null,
+    cloneGroupId: String? = null,
+    cloneIndex: Int = 0,
+    targetText: String = "",
+    masterText: String = ""
+): Modifier = composed {
+    val engine = LocalAgenticEngine.current
+
+    this
+        .onGloballyPositioned { coords ->
+            val rootRect = coords.boundsInRoot()
+            // Convert viewport coordinates -> scroll-independent content coordinates
+            val contentRect = rootRect.translate(0f, engine.scrollState.value.toFloat())
+            engine.registerLayer(
+                id = id, kind = kind, contentRect = contentRect,
+                parentId = parentId, cloneGroupId = cloneGroupId,
+                cloneIndex = cloneIndex, targetText = targetText, masterText = masterText
+            )
+        }
+        .graphicsLayer {
+            // Draw-phase read ONLY -> zero recompositions during reveal!
+            alpha = engine.layers[id]?.revealAlpha ?: 0f
+        }
+}
+
+@Composable
+fun AgenticText(
+    id: String,
+    text: String,
+    style: TextStyle,
+    modifier: Modifier = Modifier,
+    parentId: String? = null,
+    cloneGroupId: String? = null,
+    cloneIndex: Int = 0,
+    masterText: String = ""
+) {
+    val engine = LocalAgenticEngine.current
+    val layer = engine.layers[id]
+
+    // Keep full text layout size measured (0.00 layout shift!) while streaming characters
+    val displayText = when {
+        layer == null || layer.revealAlpha == 0f -> text // Invisible due to graphicsLayer alpha = 0
+        layer.showingMasterCloneText -> layer.masterText
+        layer.phase == LayerPhase.REVEALED -> text
+        else -> text.take(layer.visibleCharCount) + if (layer.visibleCharCount < text.length) "│" else ""
+    }
+
+    val highlightBg = if (layer?.highlightOverwriteActive == true) {
+        Color(0x590D99FF) // Translucent Figma Cmd+A selection highlight
+    } else Color.Transparent
+
+    Text(
+        text = displayText,
+        style = style,
+        modifier = modifier
+            .agentLayer(
+                id = id, kind = LayerKind.TEXT, parentId = parentId,
+                cloneGroupId = cloneGroupId, cloneIndex = cloneIndex,
+                targetText = text, masterText = masterText
+            )
+            .background(highlightBg)
+    )
+}
+
+5. Wiring It Together in Your Portfolio Screen (AgenticStage.kt)
+package com.portfolio.agentic
+
+import androidx.compose.foundation.*
+import androidx.compose.foundation.gestures.awaitEachGesture
+import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Text
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+
+@Composable
+fun AgenticPortfolioScreen() {
+    val scrollState = rememberScrollState()
+    val engine = remember { AgenticEngine(scrollState, agentCount = 16) }
+    val haptics = LocalHapticFeedback.current
+    val scope = rememberCoroutineScope()
+
+    LaunchedEffect(engine) {
+        engine.runSimulation(scope) {
+            // Subtle tactile tick whenever a Red Smart Guide snaps!
+            haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+        }
+    }
+
+    CompositionLocalProvider(LocalAgenticEngine provides engine) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.Black)
+                // Turn the visitor's finger into Agent #17 for interactive blue contact glow!
+                .pointerInput(Unit) {
+                    awaitEachGesture {
+                        val down = awaitFirstDown(requireUnconsumed = false)
+                        engine.userTouchContentPos = down.position + Offset(0f, scrollState.value.toFloat())
+                        do {
+                            val event = awaitPointerEvent()
+                            val pt = event.changes.firstOrNull()
+                            if (pt != null && pt.pressed) {
+                                engine.userTouchContentPos = pt.position + Offset(0f, scrollState.value.toFloat())
+                            } else {
+                                engine.userTouchContentPos = null
+                            }
+                        } while (event.changes.any { it.pressed })
+                        engine.userTouchContentPos = null
+                    }
+                }
+        ) {
+            // LAYER 1: Real interactive Compose UI (never cloned, live immediately!)
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(scrollState)
+                    .padding(20.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                // Hero Card
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(220.dp)
+                        .agentLayer(id = "hero_card", kind = LayerKind.CONTAINER)
+                        .background(Color(0xFF141416), RoundedCornerShape(16.dp))
+                        .padding(20.dp)
+                ) {
+                    AgenticText(
+                        id = "hero_title",
+                        parentId = "hero_card",
+                        text = "Building Autonomous Systems & Native Craft.",
+                        style = TextStyle(color = Color.White, fontSize = 26.sp, fontWeight = FontWeight.Bold)
+                    )
+                }
+
+                // Clone Group Example: Metric Tile [0] builds -> [1] & [2] Alt-Drag Clone & Cmd+A Overwrite!
+                val metrics = listOf("478 Tools", "14 Servers", "120Hz Native")
+                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    metrics.forEachIndexed { idx, label ->
+                        Box(
+                            modifier = Modifier
+                                .weight(1f)
+                                .height(92.dp)
+                                .agentLayer(
+                                    id = "metric_box_$idx",
+                                    kind = LayerKind.CONTAINER,
+                                    cloneGroupId = "metrics",
+                                    cloneIndex = idx
+                                )
+                                .background(Color(0xFF18181B), RoundedCornerShape(12.dp))
+                                .padding(12.dp),
+                            contentAlignment = Alignment.CenterStart
+                        ) {
+                            AgenticText(
+                                id = "metric_txt_$idx",
+                                parentId = "metric_box_$idx",
+                                cloneGroupId = "metrics_txt",
+                                cloneIndex = idx,
+                                text = label,
+                                masterText = metrics.first(),
+                                style = TextStyle(color = Color.White, fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
+                            )
+                        }
+                    }
+                }
+            }
+
+            // LAYER 2: 120Hz High-DPI Canvas Overlay
+            AgenticOverlayCanvas(engine = engine)
+
+            // LAYER 3: Floating Agentic HUD Pill
+            Row(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 24.dp)
+                    .background(Color(0xEE18181B), RoundedCornerShape(999.dp))
+                    .border(1.dp, Color.White.copy(alpha = 0.12f), RoundedCornerShape(999.dp))
+                    .padding(horizontal = 16.dp, vertical = 10.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                val status = when (engine.act) {
+                    BuildAct.SCANNING -> "Scanning tree..."
+                    BuildAct.BUILDING -> "16 agents · ${engine.completedCount} / ${engine.totalCount}"
+                    BuildAct.FINISHED -> "Built in %.1fs".format(engine.elapsedSeconds)
+                }
+                Text(status, color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Medium)
+            }
+        }
+    }
+}
+
+6. Three Native Android Upgrades to Make Yours Extraordinary
+
+Android 12+ Micro-Haptics (PRIMITIVE_LOW_TICK): Replace HapticFeedbackType.TextHandleMove with VibratorManager + VibrationEffect.Composition.PRIMITIVE_LOW_TICK at 0.18f amplitude on keystrokes and PRIMITIVE_CLICK at 0.45f when red smart guides lock in. On modern phones with crisp linear actuators, the page literally feels like physical drafting tools snapping into place.
+Procedural PCM Sound Engine via AudioTrack: Just like the web version's zero-asset Web Audio synth, generate a short FloatArray PCM buffer at startup for E-major pentatonic sine chimes (E4, F#4, G#4, B4, C#5, E5) and filtered white-noise mechanical clicks, then play them via SoundPool with stereo pan (leftVol, rightVol) mapped directly to agent.pos.x / viewportWidthPx.
+AGSL Shader Upgrade (Android 13+ RuntimeShader): Swap the simple Canvas radial circle in Step 5 of AgenticOverlayCanvas for a custom AGSL RuntimeShader metaball/plasma field between converging cursors—so when two cursors pass close, a delicate liquid-cyan electric bridge stretches between their tips before snapping cleanly apart.
+
+Would you like to add the procedural AudioTrack E-major pentatonic + mechanical click synth next, or the Android 13+ AGSL shader for the blue cursor-contact lighting?
+
+
+ChatGPT:
+I’m not choosing the audio synth or AGSL shader next. Those are polish layers. First we need the actual About Us component tree and a correct, causal scheduler; otherwise the visual effects would be impressive but disconnected from real layout work. I also spotted several issues in the sample code that would cause premature completion, unnecessary text recomposition and nondeterministic behaviour.
+
+
+ChatGPT:
+I’ve checked the three Home images directly now. They point to three distinct behaviours: a touch-controlled lantern reveal, scroll-driven cinematic composition, and a high-contrast atmospheric hero. I’ll adapt those to ORVA’s existing graphite/chalk/violet showcase identity; the reference’s yellow spotlight, words and artwork are not being copied.
+I’m starting the core scheduler first as a small, testable Kotlin module. That lets us validate parent-before-child, master-before-clone, viewport gating and the 6–8 builder cap before wiring it into Compose.
+
+
+ChatGPT:
+The first development slice is now in place locally: the Home and About screen compositions, shared showcase tokens/frieze, scene registry, overlay drawing primitives, and a pure Kotlin DAG scheduler.
+The scheduler’s 8 checks pass, including parent-before-child, master-before-clone, viewport gating, the 8-builder cap, cancellation/retry and responsive re-layout invalidation. The Compose source has no Kotlin parser errors, but it has not been Android-build-tested because the Android Gradle project/dependencies are not present in this workspace.
+I’m keeping all source local for now, as requested. I’m not uploading any code to Dropbox yet.
+
+
+ChatGPT:
+This is the level of detail I needed. The animation is not simply a collection of cursor effects. It is a coordinated simulation of an entire design team constructing a page in real time.
+I'm incorporating this as the technical direction for ORVA's About Us experience.
+One important distinction: we're building a native Android experience, not a website. We'll reproduce the same visual behaviour using Jetpack Compose, real component measurements and Canvas rendering—not a literal DOM crawler or copied JavaScript engine.
+Neither AudioTrack nor AGSL next. Both are finishing touches. The construction engine must work perfectly before we add them.
+Actual frontend progress
+Core development underway
+
+
+
+Component
+Status
+
+
+
+Home screen composition
+Drafted
+
+
+Darkness-first lantern interaction
+Drafted
+
+
+Physical layered folder shelf
+Drafted
+
+
+Scroll-controlled apothecary frieze
+Drafted
+
+
+About Us composition
+Drafted
+
+
+Five-principle timeline
+Drafted
+
+
+Agent DAG scheduler
+Implemented
+
+
+Scene registry and layout tracking
+Implemented
+
+
+Construction Canvas primitives
+Implemented
+
+
+Engineering verification:
+
+8 Kotlin scheduler tests passed.
+Parent-before-child and master-before-clone dependencies verified.
+Eight-builder concurrency cap verified.
+Viewport gating and cancellation/retry verified.
+No Kotlin parser errors in the Compose source scan.
+
+The full Android build remains unverified because the Android Gradle project and dependencies are not available in my workspace.
+What comes next
+
+Connect the scheduler to withFrameNanos and coroutine-driven agent scripts.
+Integrate the five-role design team into the actual About Us components.
+Implement the complete four-act construction sequence.
+Finish Home interactions and polish both screens.
+Profile on physical Android devices.
+Add optional procedural sound, subtle haptics and AGSL lighting.
+
+The cursor identity will use ORVA's controlled violet palette, with white outlines. Red guides, blue editing frames and cyan contact lighting retain their distinct roles.
+Project record: I've updated our existing ORVA Notion specification with the technical decisions and development checkpoint.
+No files uploaded to Dropbox. We'll deliver the source there only when the UI is complete.
+We're building the actual experience now, not spending our time decorating a prototype.
+
+If you want, I can:
+
+Explain the 4-Act state machine in detail
+Describe the coroutine task execution flow
+Elaborate on animation techniques for native 120fps rendering
+
+
+
+ChatGPT:
+Neither AudioTrack nor AGSL next. Both are finishing touches. The construction engine must work perfectly before we add them.
+Actual frontend progress
+Core development underway
+
+
+
+Component
+Status
+
+
+
+Home screen composition
+Drafted
+
+
+Darkness-first lantern interaction
+Drafted
+
+
+Physical layered folder shelf
+Drafted
+
+
+Scroll-controlled apothecary frieze
+Drafted
+
+
+About Us composition
+Drafted
+
+
+Five-principle timeline
+Drafted
+
+
+Agent DAG scheduler
+Implemented
+
+
+Scene registry and layout tracking
+Implemented
+
+
+Construction Canvas primitives
+Implemented
+
+
+Engineering verification:
+
+8 Kotlin scheduler tests passed.
+Parent-before-child and master-before-clone dependencies verified.
+Eight-builder concurrency cap verified.
+Viewport gating and cancellation/retry verified.
+No Kotlin parser errors in the Compose source scan.
+
+The full Android build remains unverified because the Android Gradle project and dependencies are not available in my workspace.
+What comes next
+
+Connect the scheduler to withFrameNanos and coroutine-driven agent scripts.
+Integrate the five-role design team into the actual About Us components.
+Implement the complete four-act construction sequence.
+Finish Home interactions and polish both screens.
+Profile on physical Android devices.
+Add optional procedural sound, subtle haptics and AGSL lighting.
+
+The cursor identity will use ORVA's controlled violet palette, with white outlines. Red guides, blue editing frames and cyan contact lighting retain their distinct roles.
+Project record: I've updated our existing ORVA Notion specification with the technical decisions and development checkpoint.
+No files uploaded to Dropbox. We'll deliver the source there only when the UI is complete.
+We're building the actual experience now, not spending our time decorating a prototype.
